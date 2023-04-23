@@ -146,15 +146,16 @@
 
     // Loop through the links
     for (var i = 0; i < links.length; i++) {
-        // Add a click event listener to each link
-        links[i].addEventListener("click", function() {
-            // Remove the "active" class from all links
-            for (var j = 0; j < links.length; j++) {
-                links[j].classList.remove("active");
-            }
-            // Add the "active" class to the clicked link
-            this.classList.add("active");
-        });
+          // Add a click event listener to each link
+          links[i].addEventListener("click", function(event) {
+              event.preventDefault(); // prevent default link behavior
+              // Remove the "active" class from all links
+              for (var j = 0; j < links.length; j++) {
+                  links[j].classList.remove("active");
+              }
+              // Add the "active" class to the clicked link
+              this.classList.add("active");
+          });
     }
     </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
