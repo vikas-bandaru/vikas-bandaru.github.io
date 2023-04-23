@@ -20,7 +20,9 @@
     .container-fluid {
       height: 90%;
     }
-
+    #exercises {
+        height: 90vh;
+    }
     #row {
         height: 90vh;
     }
@@ -39,6 +41,7 @@
 
     #output {
       height: 90vh;
+      width: 100%;
       border: none;
       margin: 0;
       padding: 0;
@@ -49,14 +52,14 @@
   
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="introwebdev.html">Intro to Web Dev</a>
+        <a class="navbar-brand" href="index.html">Intro to Web Dev</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="introwebdev.html">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -105,8 +108,13 @@
   <div class="container-fluid">
     <div class="row">
         <div class="col-sm-4">
-          <div id="">
+          <div id="exercises">
+            <h3>Exercise 1</h3>
             <p class="exercise">Create a webpage that has a header, two columns and a footer. The header and footer should have a background color of light blue, and the columns should have a background color of white. Use CSS grid to layout the page.</p>
+            <h3>Exercise 2</h3>
+            <p class="exercise">Create a webpage with a header, a main section and a footer. The main section should have a background color of light gray. Inside the main section, create three divs with different background colors, and place them next to each other using CSS float. Inside each div, add an image and some text.</p>
+            <h3>Exercise 3</h3>
+            <p class="exercise">Create a webpage with a header, a main section and a footer. Inside the main section, create a form with some input fields, a select menu and a submit button. Use CSS to style the form with a border, padding and margin, and use CSS to style the input fields, select menu and button with appropriate colors and fonts.</p>
           </div>
         </div>
       <div class="col-sm-4">
@@ -131,6 +139,7 @@
       var output = document.getElementById("output").contentWindow.document;
       output.open();
       output.writeln(code);
+      
       output.close();
     }
 
