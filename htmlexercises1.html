@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tags Examples and Exercises</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css"> -->
+
+  <style>
+    .navbar-nav {
+      margin: auto;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .exercise {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .exercise h3 {
+      margin-top: 0;
+    }
+    .exercise p {
+      margin-bottom: 0;
+    }
+    .exercise pre {
+      margin-top: 0;
+      white-space: pre-wrap;
+    }
+    .exercise input[type="submit"] {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="introwebdev.html">Intro to Web Dev</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="introwebdev.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Learn HTML
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="html.html">HTML Overview</a></li>  
+              <li><a class="dropdown-item" href="tags.html">HTML Tags</a></li>
+              <li><a class="dropdown-item" href="htmlexercises1.html">HTML Tag Examples 1</a></li>
+              <li><a class="dropdown-item" href="htmlexercises2.html">HTML Tag Examples 2</a></li>
+              <li><a class="dropdown-item" href="html5demo.html">HTML 5 Tags Demo</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Learn CSS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="css.html">CSS Overview</a></li>  
+              <li><a class="dropdown-item" href="cssselectors.html">CSS Selectors & Properties</a></li>
+              <li><a class="dropdown-item" href="cssboxmodel.html">CSS Box Model</a></li>
+              <li><a class="dropdown-item" href="cssFloatPosDisp.html">CSS Float, Position, Display</a></li>
+              <li><a class="dropdown-item" href="csslayouts.html">CSS Layouts</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+<div class="container">
+  
+  <h1 class="text-center mb-5">HTML Tags Examples and Exercises - Part 1</h1>
+  
+  <h2>The &lt;h1&gt; to &lt;h6&gt; Tags</h2>
+  <p>The &lt;h1&gt; to &lt;h6&gt; tags are used to define headings:</p>
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+  <div class="exercise">
+    <h3>Exercise 1</h3>
+    <p>Create a heading with the text "My First Heading" using the &lt;h1&gt; tag.</p>
+    <pre>&lt;h1&gt;My First Heading&lt;/h1&gt;</pre>
+    <form>
+      <label for="exercise1">Answer:</label>
+      <input type="text" id="exercise1" name="exercise1">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <h2>The &lt;p&gt; Tag</h2>
+  <p>The &lt;p&gt; tag is used to define paragraphs:</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nisi auctor, ultrices felis vitae, congue purus. Nulla facilisi. Sed nec dapibus mi. Etiam euismod ullamcorper nunc, id pellentesque mi sagittis non. Aenean volutpat nibh quis enim pulvinar tincidunt. Ut sit amet facilisis dolor.</p>
+  <div class="exercise">
+    <h3>Exercise 2</h3>
+    <p>Create a paragraph with the text "Lorem ipsum dolor sit amet, consectetur adipiscing elit." using the &lt;p&gt; tag.</p>
+    <pre>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;</pre>
+    <form>
+      <label for="exercise2">Answer:</label>
+      <input type="text" id="exercise2" name="exercise2">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <h2>The &lt;a&gt; Tag</h2>
+  <p>The &lt;a&gt; tag is used to define anchors (links):</p>
+    <p>Visit the <a href="https://www.w3schools.com">W3Schools</a> website.</p>
+    <div class="exercise">
+      <h3>Exercise 3</h3>
+      <p>Create a link to "https://www.google.com" with the text "Visit Google" using the &lt;a&gt; tag.</p>
+      <pre>&lt;a href="https://www.google.com"&gt;Visit Google&lt;/a&gt;</pre>
+      <form>
+        <label for="exercise3">Answer:</label>
+        <input type="text" id="exercise3" name="exercise3">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <h2>The &lt;img&gt; Tag</h2>
+    <p>The &lt;img&gt; tag is used to display images:</p>
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+    <div class="exercise">
+      <h3>Exercise 4</h3>
+      <p>Display the image "https://www.example.com/image.jpg" with the alternate text "Example Image" using the &lt;img&gt; tag.</p>
+      <pre>&lt;img src="https://www.example.com/image.jpg" alt="Example Image"&gt;</pre>
+      <form>
+        <label for="exercise4">Answer:</label>
+        <input type="text" id="exercise4" name="exercise4">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <p>Practice some more tags <a href="htmlexercises2.html">here</a>.</p>
+  </div>
+  </body>
+  </html>

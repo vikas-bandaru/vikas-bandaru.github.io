@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn CSS Float</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Styling for the navbar */
+    .navbar-nav {
+      margin: auto;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    /* Styling for the float property examples */
+    .container {
+      margin-top: 2rem;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      border: 1px solid black;
+      float: left;
+    }
+    .img-box {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      float: right;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+    }
+    /* Styling for the up array fixed position example */
+      #up-arrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        cursor: pointer;
+      }
+      .uparrow {
+        width: 50px;
+        height: 50px;
+      }
+    /* .clearfix {
+      clear: both;
+    } */
+    /* Styling for the position property examples */
+    .example {
+      width: 400px;
+      height: 200px;
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .example .posbox {
+      width: 50px;
+      height: 50px;
+      background-color: #007bff;
+      position: absolute;
+    }
+    .example .box-1 {
+      top: 20px;
+      left: 20px;
+    }
+    .example .box-2 {
+      top: 60px;
+      left: 100px;
+    }
+    .example .box-3 {
+      top: 100px;
+      right: 20px;
+    }
+    
+    /* Styling for the display property examples */
+    .example-box {
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      height: 100px;
+      background-color: #f2f2f2;
+    }
+    .example-inline-block {
+      display: inline-block;
+    }
+    .example-block {
+      display: block;
+    }
+    .example-inline {
+      display: inline;
+    }
+    .example-flex {
+      display: flex;
+    }
+    .example-inline-flex {
+      display: inline-flex;
+    }
+    .example-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .example-table {
+      display: table;
+    }
+    .example-table-row {
+      display: table-row;
+    }
+    .example-table-cell {
+      display: table-cell;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="introwebdev.html">Intro to Web Dev</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="introwebdev.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Learn HTML
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="html.html">HTML Overview</a>
+              </li>
+              <li><a class="dropdown-item" href="tags.html">HTML Tags</a></li>
+              <li>
+                <a class="dropdown-item" href="htmlexercises1.html">HTML Tag Examples 1</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htmlexercises2.html">HTML Tag Examples 2</a>
+                <li><a class="dropdown-item" href="html5demo.html">HTML 5 Tags Demo</a></li>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Learn CSS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="css.html">CSS Overview</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="cssselectors.html">CSS Selectors & Properties</a>
+              </li>
+              <li><a class="dropdown-item" href="cssboxmodel.html">CSS Box Model</a></li>
+              <li><a class="dropdown-item" href="cssfloat.html">CSS Float, Position, Display</a></li>
+              <li><a class="dropdown-item" href="csslayouts.html">CSS Layouts</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+  <div class="container">
+    <h1>CSS Float</h1>
+    <p>The CSS float property is used to specify how an element should float in a container.</p>
+    <h2>Examples</h2>
+    <p>Here are some examples of how float works:</p>
+    <div class="box" style="background-color: red;"></div>
+    <div class="box" style="background-color: green;"></div>
+    <div class="box" style="background-color: blue;"></div>
+    <div class="clearfix"></div>
+    <p>In the above example, the three boxes have been floated to the left using the float property. Without the clearfix, the parent container would not be able to contain the floated boxes.</p>
+    <h2>Image Examples</h2>
+    <p>Here are some examples of how float works:</p>
+    <div class="img-box" style="width: 200px; height: 200px;"><img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png" alt="html logo"></div>
+    <div class="img-box" style="width: 200px; height: 200px;"><img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png" alt="css logo"></div>
+    <div class="img-box" style="width: 200px; height: 200px;"><img src="https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_960_720.png" alt="js logo"></div>
+    <div class="clearfix"></div>
+    <h2>Exercise</h2>
+    <p>Try creating your own layout using the float property.</p>
+    <!-- Up Arrow Image -->
+    <a href="#top" id="up-arrow"><img class="uparrow" src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-512.png" alt="Up Arrow"></a>
+    <h1>CSS Positioning</h1>
+    <p>In CSS, the <code>position</code> property is used to set the positioning of an element on the webpage. There are four values for the <code>position</code> property:</p>
+    <ul>
+      <li><strong>Static:</strong> The default value. The element is positioned according to the normal flow of the document.</li>
+      <li><strong>Relative:</strong> The element is positioned relative to its normal position.</li>
+      <li><strong>Absolute:</strong> The element is positioned relative to its <strong>nearest positioned ancestor</strong> or the initial containing block (the body element), whichever is closer. The <em>closest positioned ancestor</em> refers to the nearest parent element that has a position value <strong>other than "static"</strong>.</li>
+      <li><strong>Fixed:</strong> The element is positioned relative to the browser window and does not move when the page is scrolled.</li>
+    </ul>
+    <p>Here are some examples:</p>
+    <div class="example">
+      <div class="posbox box-1"></div>
+      <div class="posbox box-2"></div>
+      <div class="posbox box-3"></div>
+    </div>
+    <p>Play around with the CSS <code>position</code> property and the <code>top</code>, <code>bottom</code>, <code>left</code>, and <code>right</code> properties to see how the positioning of elements changes on the webpage.</p>
+    <h1>CSS Display Property</h1>
+    <p>The <code>display</code> property specifies the display behavior of an element. There are several values that this property can take:</p>
+    <ul>
+      <li><code>inline</code></li>
+      <li><code>block</code></li>
+      <li><code>inline-block</code></li>
+      <li><code>flex</code></li>
+      <li><code>inline-flex</code></li>
+      <li><code>grid</code></li>
+      <li><code>table</code></li>
+      <li><code>table-row</code></li>
+      <li><code>table-cell</code></li>
+    </ul>
+
+    <h2>Examples</h2>
+    <p>Here are some examples of how these different values of the <code>display</code> property affect the layout of an element:</p>
+    
+    <div class="example-box example-inline-block">Inline Block</div>
+    <div class="example-box example-block">Block</div>
+    <div class="example-box example-inline">Inline</div>
+    <div class="example-box example-flex">
+      <div class="example-box">Flex Item 1</div>
+      <div class="example-box">Flex Item 2</div>
+      <div class="example-box">Flex Item 3</div>
+    </div>
+    <div class="example-box example-inline-flex">
+      <div class="example-box">Inline Flex Item 1</div>
+      <div class="example-box">Inline Flex Item 2</div>
+      <div class="example-box">Inline Flex Item 3</div>
+    </div> 
+    <div class="example-grid">
+      <div class="example-box">Grid Item 1</div>
+      <div class="example-box">Grid Item 2</div>
+      <div class="example-box">Grid Item 3</div>
+      <div class="example-box">Grid Item 4</div>
+      <div class="example-box">Grid Item 5</div>
+      <div class="example-box">Grid Item 6</div>
+    </div>
+    <div class="example-table">
+      <div class="example-table-row">
+        <div class="example-table-cell">Table Cell 1</div>
+        <div class="example-table-cell">Table Cell 2</div>
+        <div class="example-table-cell">Table Cell 3</div>
+      </div>
+      <div class="example-table-row">
+        <div class="example-table-cell">Table Cell 4</div>
+        <div class="example-table-cell">Table Cell 5</div>
+        <div class="example-table-cell">Table Cell 6</div>
+      </div>
+    </div>
+    <p>Feel free to experiment with the <code>display</code> property and see how it affects the layout of your page!</p>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

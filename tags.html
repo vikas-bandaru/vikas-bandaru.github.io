@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tags Examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+        .navbar-nav {
+          margin: auto;
+          display: flex;
+          justify-content: space-evenly;
+        }
+      </style>
+    </head>
+
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="introwebdev.html">Intro to Web Dev</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="introwebdev.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Learn HTML
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="html.html">HTML Overview</a></li>  
+              <li><a class="dropdown-item" href="tags.html">HTML Tags</a></li>
+              <li><a class="dropdown-item" href="htmlexercises1.html">HTML Tag Examples 1</a></li>
+              <li><a class="dropdown-item" href="htmlexercises2.html">HTML Tag Examples 2</a></li>
+              <li><a class="dropdown-item" href="html5demo.html">HTML 5 Tags Demo</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Learn CSS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="css.html">CSS Overview</a></li>  
+              <li><a class="dropdown-item" href="cssselectors.html">CSS Selectors & Properties</a></li>
+              <li><a class="dropdown-item" href="cssboxmodel.html">CSS Box Model</a></li>
+              <li><a class="dropdown-item" href="cssFloatPosDisp.html">CSS Float, Position, Display</a></li>
+              <li><a class="dropdown-item" href="csslayouts.html">CSS Layouts</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <div class="container my-4">
+        <h1 class="text-center">HTML Tags and Examples</h1>
+        <h2>Simple HTML Tags</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2><a href="htmlexercises1.html">Headings</a></h2>
+                <ul>
+                    <li><strong>&lt;h1&gt;</strong> - Defines a top-level heading</li>
+                    <li><strong>&lt;h2&gt;</strong> - Defines a subheading</li>
+                    <li><strong>&lt;h3&gt;</strong> - Defines a sub-subheading</li>
+                    <li><strong>&lt;h4&gt;</strong> - Defines a sub-sub-subheading</li>
+                    <li><strong>&lt;h5&gt;</strong> - Defines a sub-sub-sub-subheading</li>
+                    <li><strong>&lt;h6&gt;</strong> - Defines a sub-sub-sub-sub-subheading</li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2><a href="htmlexercises1.html">Paragraphs</a></h2>
+                <ul>
+                    <li><strong>&lt;p&gt;</strong> - Defines a paragraph</li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2><a href="htmlexercises1.html">Links</a></h2>
+                <ul>
+                    <li><strong>&lt;a&gt;</strong> - Defines a hyperlink</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2><a href="htmlexercises1.html">Images</a></h2>
+                <ul>
+                    <li><strong>&lt;img&gt;</strong> - Defines an image</li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2><a href="htmlexercises2.html">Lists</a></h2>
+                <ul>
+                    <li><strong>&lt;ul&gt;</strong> - Defines an unordered list</li>
+                    <li><strong>&lt;ol&gt;</strong> - Defines an ordered list</li>
+                    <li><strong>&lt;li&gt;</strong> - Defines a list item</li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2><a href="htmlexercises2.html">Tables</a></h2>
+                <ul>
+                    <li><strong>&lt;table&gt;</strong> - Defines a table</li>
+                    <li><strong>&lt;tr&gt;</strong> - Defines a table row</li>
+                    <li><strong>&lt;td&gt;</strong> - Defines a table cell</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>Line Breaks</h2>
+                <ul>
+                    <li><strong>&lt;br&gt;</strong> - a self-closing tag that creates a line break in the text</li>
+                    <pre><code><!-- Line Breaks -->
+                    <p>This is some text.<br>This is some more text.</p></code></pre>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Horizontal Rule</h2>
+                <ul>
+                    <li><strong>&lt;hr&gt;</strong> - a self-closing tag that creates a horizontal line</li>
+                    <pre><code><!-- Horizontal Rule -->
+                    <p>This is some text.<hr>This is some more text.</p></code></pre>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2><a href="htmlexercises2.html">Div & Span</a></h2>
+                <p><strong>div</strong> and <strong>span</strong> are both container elements that are used to group other elements together. However, they have some key differences in how they are displayed and how they are used.</p>
+                <ul>
+                    <li><strong>&lt;div&gt;</strong> - a block-level element that can be used to contain other elements</li>
+                    
+                </ul>
+                <ul>
+                    <li><strong>&lt;span&gt;</strong> - an inline element that can be used to contain other elements</li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <h2>HTML 5 Tags</h2>
+        <ul>
+            <li><strong>&lt;header&gt;</strong> - Defines a header for a document or section</li>
+            <li><strong>&lt;nav&gt;</strong> - Defines a set of navigation links</li>
+            <li><strong>&lt;section&gt;</strong> - Defines a section of a document</li>
+            <li><strong>&lt;article&gt;</strong> - Defines an article</li>
+            <li><strong>&lt;aside&gt;</strong> - Defines content aside from the content (like a sidebar)</li>
+            <li><strong>&lt;footer&gt;</strong> - Defines a footer for a document or section</li>
+            <li><strong>&lt;main&gt;</strong> - Defines the main content of a document</li>
+            <li><strong>&lt;figure&gt;</strong> - Defines self-contained content, like images with captions</li>
+            <li><strong>&lt;figcaption&gt;</strong> - Defines a caption for a &lt;figure&gt; element</li>
+            <li><strong>&lt;video&gt;</strong> - Defines a video or movie</li>
+            <li><strong>&lt;audio&gt;</strong> - Defines sound or audio content</li>
+            <li><strong>&lt;canvas&gt;</strong> - Defines a drawing area</li>
+            <li><strong>&lt;progress&gt;</strong> - Defines the progress of a task</li>
+            <li><strong>&lt;meter&gt;</strong> - Defines a scalar measurement within a known range</li>
+            <li><strong>&lt;datalist&gt;</strong> - Defines a list of pre-defined options for an &lt;input&gt; element
+            </li>
+            <li><strong>&lt;details&gt;</strong> - Defines additional details that the user can view or hide</li>
+            <li><strong>&lt;summary&gt;</strong> - Defines a heading for the &lt;details&gt; element</li>
+            <li><strong>&lt;time&gt;</strong> - Defines a date/time (in machine-readable format)</li>
+            <li><strong>&lt;output&gt;</strong> - Defines the result of a calculation or user action</li>
+        </ul>
+        <h2>Example Codes</h2>
+        <p>This is an example of an <strong>&lt;h1&gt;</strong> heading</p>
+        <p>This is an example of a <strong>&lt;p&gt;</strong> paragraph</p>
+        <p>This is an example of an <strong>&lt;a&gt;</strong> hyperlink: <a href="#">Click here</a></p>
+        <img src="https://via.placeholder.com/150" alt="Placeholder image">
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <p>This is an example of a <strong>&lt;table&gt;</strong>:</p>
+        <table border="1 solid">
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+            </tr>
+            <tr>
+                <td>Cell 3</td>
+                <td>Cell 4</td>
+            </tr>
+        </table>
+        <p>This is an example of a <strong>&lt;div&gt;</strong> section:</p>
+        <div style="border: 1px solid black; padding: 10px;">
+            <p>This is some content inside a div element</p>
+        </div>
+        <p>This is an example of a <strong>&lt;video&gt;</strong> element:</p>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
