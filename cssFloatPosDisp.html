@@ -107,7 +107,7 @@
     }
     .example-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 10px;
     }
     .example-table {
@@ -231,6 +231,19 @@
       <div class="example-box">Inline Flex Item 2</div>
       <div class="example-box">Inline Flex Item 3</div>
     </div> 
+
+    <!-- .example-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    } 
+    .example-box {
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      height: 100px;
+      background-color: #f2f2f2;
+    }-->
     <div class="example-grid">
       <div class="example-box">Grid Item 1</div>
       <div class="example-box">Grid Item 2</div>
@@ -239,18 +252,19 @@
       <div class="example-box">Grid Item 5</div>
       <div class="example-box">Grid Item 6</div>
     </div>
+
     <div class="example-table">
       <div class="example-table-row">
-        <div class="example-table-cell">Table Cell 1</div>
-        <div class="example-table-cell">Table Cell 2</div>
-        <div class="example-table-cell">Table Cell 3</div>
+        <div class="example-table-cell">Row 1 Cell 1</div>
+        <div class="example-table-cell">Row 1 Cell 2</div>
+        <div class="example-table-cell">Row 1 Cell 3</div>
       </div>
       <div class="example-table-row">
-        <div class="example-table-cell">Table Cell 4</div>
-        <div class="example-table-cell">Table Cell 5</div>
-        <div class="example-table-cell">Table Cell 6</div>
+        <div class="example-table-cell">Row 2 Cell 1</div>
       </div>
     </div>
+
+
     <p>Feel free to experiment with the <code>display</code> property and see how it affects the layout of your page!</p>
   
     <p style="text-align: center;">© 2023 Made with 🖤 by <strong>Vikas Bandaru</strong></p>
