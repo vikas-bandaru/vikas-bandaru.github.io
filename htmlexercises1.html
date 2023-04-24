@@ -96,12 +96,11 @@
   <div class="exercise">
     <h3>Exercise 1</h3>
     <p>Create a heading with the text "My First Heading" using the &lt;h1&gt; tag.</p>
-    <pre>&lt;h1&gt;My First Heading&lt;/h1&gt;</pre>
-    <form>
+    <!-- <pre>&lt;h1&gt;My First Heading&lt;/h1&gt;</pre> -->
       <label for="exercise1">Answer:</label>
       <input type="text" id="exercise1" name="exercise1">
-      <input type="submit" value="Submit">
-    </form>
+      <button onclick="checkAnswer1()">Check Answer</button>
+      <p id="result1"></p> 
   </div>
 
   <h2>The &lt;p&gt; Tag</h2>
@@ -110,12 +109,11 @@
   <div class="exercise">
     <h3>Exercise 2</h3>
     <p>Create a paragraph with the text "Lorem ipsum dolor sit amet, consectetur adipiscing elit." using the &lt;p&gt; tag.</p>
-    <pre>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;</pre>
-    <form>
+    <!-- <pre>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;</pre> -->
       <label for="exercise2">Answer:</label>
       <input type="text" id="exercise2" name="exercise2">
-      <input type="submit" value="Submit">
-    </form>
+      <button onclick="checkAnswer2()">Check Answer</button>
+      <p id="result2"></p> 
   </div>
 
   <h2>The &lt;a&gt; Tag</h2>
@@ -124,12 +122,11 @@
     <div class="exercise">
       <h3>Exercise 3</h3>
       <p>Create a link to "https://www.google.com" with the text "Visit Google" using the &lt;a&gt; tag.</p>
-      <pre>&lt;a href="https://www.google.com"&gt;Visit Google&lt;/a&gt;</pre>
-      <form>
+      <!-- <pre>&lt;a href="https://www.google.com"&gt;Visit Google&lt;/a&gt;</pre> -->
         <label for="exercise3">Answer:</label>
         <input type="text" id="exercise3" name="exercise3">
-        <input type="submit" value="Submit">
-      </form>
+        <button onclick="checkAnswer3()">Check Answer</button>
+        <p id="result3"></p> 
     </div>
     <h2>The &lt;img&gt; Tag</h2>
     <p>The &lt;img&gt; tag is used to display images:</p>
@@ -137,12 +134,11 @@
     <div class="exercise">
       <h3>Exercise 4</h3>
       <p>Display the image "https://www.example.com/image.jpg" with the alternate text "Example Image" using the &lt;img&gt; tag.</p>
-      <pre>&lt;img src="https://www.example.com/image.jpg" alt="Example Image"&gt;</pre>
-      <form>
-        <label for="exercise4">Answer:</label>
+      <!-- <pre>&lt;img src="https://www.example.com/image.jpg" alt="Example Image"&gt;</pre> -->
+      <label for="exercise4">Answer:</label>
         <input type="text" id="exercise4" name="exercise4">
-        <input type="submit" value="Submit">
-      </form>
+        <button onclick="checkAnswer4()">Check Answer</button>
+        <p id="result4"></p> 
     </div>
     <p>Practice some more tags <a href="htmlexercises2.html">here</a>.</p> 
     <p style="text-align: center; color: black;">© 2023 Made with 🖤 by <strong>Vikas Bandaru</strong></p>
@@ -166,6 +162,47 @@
               // Add the "active" class to the clicked link
               this.classList.add("active");
           });
+        
+          function checkAnswer1() {
+            const answer = document.getElementById("exercise1").value;
+            if (answer === '<h1>My First Heading</h1>') {
+              document.getElementById("result1").textContent = "Correct!";
+                document.getElementById("result1").style.color = "green";
+            } else {
+              document.getElementById("result1").textContent = "Incorrect. Type code in lowercase and try again.";
+                document.getElementById("result1").style.color = "red";
+            }
+        }
+        function checkAnswer2() {
+          const answer = document.getElementById("exercise2").value;
+            if (answer === '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>') {
+              document.getElementById("result2").textContent = "Correct!";
+                document.getElementById("result2").style.color = "green";
+            } else {
+              document.getElementById("result2").textContent = "Incorrect. Type code in lowercase and try again.";
+                document.getElementById("result2").style.color = "red";
+            }
+        }
+        function checkAnswer3() {
+          const answer = document.getElementById("exercise3").value;
+            if (answer === '<a href="https://www.google.com">Visit Google</a>') {
+              document.getElementById("result3").textContent = "Correct!";
+                document.getElementById("result3").style.color = "green";
+            } else {
+              document.getElementById("result3").textContent = "Incorrect. Type code in lowercase and try again.";
+                document.getElementById("result3").style.color = "red";
+            }
+        }
+        function checkAnswer4() {
+          const answer = document.getElementById("exercise4").value;
+            if (answer === '<img src="https://www.example.com/image.jpg" alt="Example Image">') {
+              document.getElementById("result4").textContent = "Correct!";
+                document.getElementById("result4").style.color = "green";
+            } else {
+              document.getElementById("result4").textContent = "Incorrect. Type code in lowercase and try again.";
+                document.getElementById("result4").style.color = "red";
+            }
+        }
     }
     </script>
   </body>
