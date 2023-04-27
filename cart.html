@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="js/cart.js"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Shopping Cart</h1>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Products</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="https://via.placeholder.com/150x150.png" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 1</h5>
+                                <p class="card-text">&#8377;10</p>
+                                <button class="btn btn-primary add-to-cart" data-name="Product 1" data-price="10">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="https://via.placeholder.com/150x150.png" alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 2</h5>
+                                <p class="card-text">&#8377;20</p>
+                                <button class="btn btn-primary add-to-cart" data-name="Product 2" data-price="20">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="https://via.placeholder.com/150x150.png" alt="Product 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 3</h5>
+                                <p class="card-text">&#8377;30</p>
+                                <button class="btn btn-primary add-to-cart" data-name="Product 3" data-price="30">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Cart</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-body">
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" align="right">Total:</td>
+                            <td colspan="2" id="cart-total">&#8377;0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
