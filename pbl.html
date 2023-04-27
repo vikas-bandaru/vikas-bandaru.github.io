@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Playground</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar-nav {
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #exercises {
+            padding-top: 10px;
+            height: 90vh;
+            text-align: justify;
+        }
+
+        .exercise {
+            font-size: 0.95em;
+        }
+
+        #row {
+            height: 75vh;
+        }
+
+        #code-panel {
+            padding-top: 10px;
+            height: 90vh;
+        }
+
+        #code-panel textarea {
+            height: 85vh;
+        }
+
+        #right-panel {
+            height: 90vh;
+            padding: 0;
+        }
+
+        #output {
+            height: 90vh;
+            width: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .footer-text {
+            padding-left: 25%;
+        }
+
+        footer {
+            bottom: 0;
+            position: sticky;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div id="exercises">
+                        <h4>Project 1</h4>
+                        <h3>Quotes Machine</h3>
+                        <p class="exercise">Create a webpage that showcases 2 famous quotes. Then gives a choice to the user to add more quotes.
+                            <ul>
+                            <li>Use basic HTML tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;footer&gt;</code>, etc. to create the structure of the webpage.</li>
+                            <li>Add some CSS to style the webpage, such as setting a background color, font family, font size, and colors for the different HTML elements. You can also add some hover effects to the links and buttons.</li>
+                            <li>Use a bit of JavaScript to add some interactivity to the webpage, such as allowing users to add new quotes or to display a random quote each time the page is loaded.</li></ul></p>
+                        <p><strong><a href="quotes.html" target="_blank">Expected Result</a></strong></p>
+                        </div>
+                </div>
+                <div class="col-sm-4">
+                    <div id="code-panel">
+                        <textarea id="code" class="form-control" placeholder="Enter HTML, CSS, JS code here"></textarea>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div id="right-panel">
+                        <iframe id="output"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Learn Web Dev</a>
+        <div class="container footer-text">
+            <span class="navbar-text">© 2023 Made with 🤍 by Vikas Bandaru</span>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.
+            js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function updateOutput() {
+            var code = document.getElementById("code").value;
+            var output = document.getElementById("output").contentWindow.document;
+            output.open();
+            output.writeln(code);
+
+            output.close();
+        }
+
+        var codeTextarea = document.getElementById("code");
+        codeTextarea.addEventListener("input", updateOutput);
+        updateOutput();
+    </script>
+</body>
+
+</html>
