@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Basics Tutorial</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        
+        .navbar-nav {
+                margin: auto;
+                display: flex;
+                justify-content: space-evenly;
+                position: sticky;
+            }
+
+        /* Styling for the up array fixed position example */
+        #up-arrow {
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        .uparrow {
+            width: 50px;
+            height: 50px;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        /* flex-direction to column: to make the header, main, and footer elements stack vertically.  */
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* flex: 1 on the main element: to make it take up all the available space */
+        main {
+            flex: 1;
+        }
+
+        /* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
+
+        .footer-text {
+            padding-left: 35%;
+        }
+
+        footer {
+            flex-shrink: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+            <!-- top menu -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="index.html">Learn Web Dev</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="js.html">JavaScript Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#basics">JavaScript Basics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#loops">Conditionals & Loops</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#arrays">Arrays & Functions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#objects">JavaScript Objects</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        <h1 id="basics">JavaScript Basics Tutorial</h1>
+        <p>Welcome to our tutorial on the basics of JavaScript! In this tutorial, we will cover variables, data types,
+            operators, conditional statements, arrays, objects, and loops, and provide examples and expected results.</p>
+        <h2>Variables</h2>
+        <p>Variables are used to store values. In JavaScript, we can declare variables using the <code>var</code>
+            keyword. Here's an example:</p>
+        <pre><code>var x = 5;</code></pre>
+        <p>In this example, we've declared a variable <code>x</code> and assigned it the value of <code>5</code>.</p>
+        <h2>Data Types</h2>
+        <p>JavaScript supports several data types:</p>
+        <ul>
+            <li>Numbers - e.g. <code>42</code>, <code>3.14</code></li>
+            <li>Strings - e.g. <code>"hello"</code>, <code>'world'</code></li>
+            <li>Booleans - e.g. <code>true</code>, <code>false</code></li>
+            <li>Arrays - e.g. <code>[1, 2, 3]</code>, <code>['apple', 'banana', 'cherry']</code></li>
+            <li>Objects - e.g. <code>{name: "John", age: 30}</code></li>
+            <li>Undefined - e.g. <code>undefined</code></li>
+            <li>Null - e.g. <code>null</code></li>
+        </ul>
+        <h2>Operators</h2>
+        <p>JavaScript supports several types of operators:</p>
+        <ul>
+            <li>Arithmetic operators - e.g. <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>,
+                <code>%</code></li>
+            <li>Assignment operators - e.g. <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>,
+                <code>/=</code>, <code>%=</code></li>
+            <li>Comparison operators - e.g. <code>==</code>, <code>!=</code>, <code>===</code>, <code>!==</code>,
+                <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code></li>
+            <li>Logical operators - e.g. <code>&amp;&amp;</code>, <code>||</code>, <code>!</code></li>
+        </ul>
+        <p>Here's an example:</p>
+        <pre><code>var x = 5;
+var y = 10;
+var z = x + y;
+console.log(z); // Output: 15</code></pre>
+        <p>In this example, we've declared three variables - <code>x</code>, <code>y</code>, and <code>z</code> - and
+            used the arithmetic operator <code>+</code> to add <code>x</code> and <code>y</code> and assign the result
+            to <code>z</code>.</p>
+            <h2 id="loops">Conditional Statements</h2>
+            <p>Conditional statements allow us to execute different code based on different conditions. In JavaScript, we use the <code>if</code>, <code>else if</code>, and <code>else</code> keywords to create conditional statements. Here's an example:</p>
+            <h3>If Statement</h3>
+      <p>The if statement is used to execute a block of code if a condition is true. Here's an example:</p>
+      <pre><code>var x = 10;
+if (x > 5) {
+  console.log("x is greater than 5");
+}</code></pre>
+      <p>In this example, the if statement checks if the variable <code>x</code> is greater than <code>5</code>. Since <code>x</code> is equal to <code>10</code>, the condition is true and the code inside the curly braces will be executed, resulting in the output <code>"x is greater than 5"</code>.</p>
+      <h3>Else Statement</h3>
+      <p>The else statement is used to execute a block of code if the condition in the if statement is false. Here's an example:</p>
+      <pre><code>var x = 3;
+if (x > 5) {
+  console.log("x is greater than 5");
+} else {
+  console.log("x is less than or equal to 5");
+}</code></pre>
+      <p>In this example, the if statement checks if the variable <code>x</code> is greater than <code>5</code>. Since <code>x</code> is less than <code>5</code>, the condition is false and the code inside the curly braces for the else statement will be executed, resulting in the output <code>"x is less than or equal to 5"</code>.</p>
+      <h3>Else If Statement</h3>
+      <p>The else if statement is used to test multiple conditions. Here's an example:</p>
+      <pre><code>var x = 3;
+if (x > 5) {
+  console.log("x is greater than 5");
+} else if (x < 5) {
+  console.log("x is less than 5");
+} else {
+  console.log("x is equal to 5");
+}</code></pre>
+      <p>In this example, the if statement checks if the variable <code>x</code> is greater than <code>5</code>. Since <code>x</code> is less than <code>5</code>, the first condition is false, and the else if statement checks if <code>x</code> is less than <code>5</code>. Since <code>x</code> is less than <code>5</code>, this condition is true and the code inside the curly braces for the else if statement will be executed, resulting in the output <code>"x is less than 5"</code>.</p>
+      <h3>Ternary Operator</h3>
+      <p>The ternary operator provides a shorthand way to write if-else statements. Here's an example:</p>
+      <pre><code>var x = 10;
+var message = (x > 5) ? "x is greater than 5" : "x is less than or equal to 5";
+console.log(message);</code></pre>
+      <p>In this example, the ternary operator checks if the variable <code>x</code> is greater than <code>5</code>. Since <code>x</code> is equal to <code>10</code>, the condition is true and the value of <code>message</code> will be <code>"x is greater than 5"</code>.</p>
+      <h3>Switch Statement</h3>
+      <p>The switch statement is used to execute different actions based on different conditions. Here's an example:</p>
+      <pre><code>var day = "Monday";
+switch (day) {
+    case "Monday":
+      console.log("Today is Monday");
+      break;
+    case "Tuesday":
+      console.log("Today is Tuesday");
+      break;
+    default:
+      console.log("Today is not Monday or Tuesday");
+}</code></pre>
+      <p>In this example, the switch statement checks the value of the variable <code>day</code> and executes the corresponding code block. Since <code>day</code> is equal to <code>"Monday"</code>, the first case is executed, resulting in the output <code>"Today is Monday"</code>.</p>
+      <h2>Loops</h2>
+      <p>Loops are used to execute the same block of code multiple times. In JavaScript, we have several types of loops:</p>
+      <ul>
+        <li>For loop</li>
+        <li>While loop</li>
+        <li>Do-while loop</li>
+        <li>For-in loop</li>
+        <li>For-of loop</li>
+      </ul>
+      <h3>For loop</h3>
+      <p>The for loop is used to execute a block of code a specified number of times. Here's an example:</p>
+      <pre><code>for (var i = 0; i < 5; i++) {
+  console.log(i);
+}</code></pre>
+      <p>In this example, we've declared a variable <code>i</code> and assigned it the value of <code>0</code>. We've then used the for loop to execute the block of code inside the curly braces <code>5</code> times, incrementing the value of <code>i</code> by <code>1</code> each time.</p>
+      <h3>While loop</h3>
+      <p>The while loop is used to execute a block of code while a specified condition is true. Here's an example:</p>
+      <pre><code>var i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}</code></pre>
+      <p>In this example, we've declared a variable <code>i</code> and assigned it the value of <code>0</code>. We've then used the while loop to execute the block ofcode inside the curly braces while the condition <code>i < 5</code> is true. The value of <code>i</code> is incremented by <code>1</code> inside the loop to avoid an infinite loop.</p>
+      <h3>Do-while loop</h3>
+      <p>The do-while loop is similar to the while loop, but it will execute the block of code at least once, even if the condition is false. Here's an example:</p>
+      <pre><code>var i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);</code></pre>
+      <p>In this example, we've declared a variable <code>i</code> and assigned it the value of <code>0</code>. We've then used the do-while loop to execute the block of code inside the curly braces at least once, and continue to execute it while the condition <code>i < 5</code> is true. The value of <code>i</code> is incremented by <code>1</code> inside the loop to avoid an infinite loop.</p>
+      <h2 id="arrays">Arrays</h2>
+      <p>Arrays are used to store multiple values in a single variable. In JavaScript, we can declare arrays using square brackets. Here's an example:</p>
+      <pre><code>var fruits = ['apple', 'banana', 'cherry'];</code></pre>
+      <p>In this example, we've declared an array called <code>fruits</code> and assigned it the values of <code>'apple'</code>, <code>'banana'</code>, and <code>'cherry'</code>.</p>
+      <p>We can access the values of an array using square bracket notation and the index of the value we want to access. Here's an example:</p>
+      <pre><code>console.log(fruits[0]); // Output: 'apple'</code></pre>
+      <h3>For-of loop</h3>
+      <p>The for-of loop is used to loop through the elements of an iterable object, such as an array. Here's an example:</p>
+      <pre><code>var fruits = ['apple', 'banana', 'cherry'];
+for (var fruit of fruits) {
+  console.log(fruit);
+}</code></pre>
+      <p>In this example, we've declared an array called <code>fruits</code> with values <code>'apple'</code>, <code>'banana'</code>, and <code>'cherry'</code>. We've then used the for-of loop to loop through the elements of the array and log each value to the console.</p>
+      
+      <h2>Functions</h2>
+      <p>A function is a set of instructions that performs a specific task. Here's an example of how to create a function:</p>
+      <pre><code>function addNumbers(num1, num2) {
+  return num1 + num2;
+}</code></pre>
+      <p>In this example, we've created a function called <code>addNumbers</code>, which takes in two parameters <code>num1</code> and <code>num2</code>, and returns their sum.</p>
+      <p>You can call a function by using its name followed by parentheses, passing in any required arguments. Here are some examples:</p>
+      <pre><code>var result = addNumbers(5, 10);
+console.log(result); // Output: 15</code></pre>
+      <p>In this example, we're calling the <code>addNumbers</code> function and passing in the arguments <code>5</code> and <code>10</code>. The function returns their sum, which is assigned to the variable <code>result</code>. The <code>console.log()</code> statement then outputs the value of <code>result</code>, which is <code>15</code>.</p>
+      <p>Functions can also be assigned to variables, which is known as a function expression. Here's an example:</p>
+      <pre><code>var multiplyNumbers = function(num1, num2) {
+  return num1 * num2;
+};</code></pre>
+      <p>In this example, we've created a function expression and assigned it to the variable <code>multiplyNumbers</code>. The function takes in two parameters <code>num1</code> and <code>num2</code>, and returns their product.</p>
+      <p>You can then call the function by using the variable name followed by parentheses, passing in any required arguments. Here's an example:</p>
+      <pre><code>var result = multiplyNumbers(3, 4);
+console.log(result); // Output: 12</code></pre>
+      <p>In this example, we're calling the <code>multiplyNumbers</code> function and passing in the arguments <code>3</code> and <code>4</code>. The function returns their product, which is assigned to the variable <code>result</code>. The <code>console.log()</code> statement then outputs the value of <code>result</code>, which is <code>12</code>.</p>
+      
+      <h2 id="objects">Objects</h2>
+    <p>An object in JavaScript is a collection of properties, which are key-value pairs. Here's an example of how to create an object:</p>
+    <pre><code>var person = {
+firstName: "John",
+lastName: "Doe",
+age: 30
+};</code></pre>
+    <p>In this example, we've created an object called <code>person</code>, which has three properties: <code>firstName</code>, <code>lastName</code>, and <code>age</code>, with corresponding values <code>"John"</code>, <code>"Doe"</code>, and <code>30</code>.</p>
+    <p>You can access an object's properties using dot notation or bracket notation. Here are some examples:</p>
+    <pre><code>console.log(person.firstName); // Output: "John"
+console.log(person["lastName"]); // Output: "Doe"</code></pre>
+    <p>In these examples, we're accessing the <code>firstName</code> and <code>lastName</code> properties of the <code>person</code> object using dot notation and bracket notation, respectively.</p>
+    <p>You can add or modify properties of an object by simply assigning a value to a new or existing property. Here are some examples:</p>
+    <pre><code>person.age = 40;
+person.job = "Developer";</code></pre>
+    <p>In these examples, we're modifying the <code>age</code> property of the <code>person</code> object to be <code>40</code>, and adding a new property called <code>job</code> with a value of <code>"Developer"</code>.</p>
+    
+      <h2>Creating an Object</h2>
+      <p>An object in JavaScript is a collection of properties, which are key-value pairs. Here's an example of how to create an object:</p>
+      <pre><code>var person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30
+};</code></pre>
+      <p>In this example, we've created an object called <code>person</code>, which has three properties: <code>firstName</code>, <code>lastName</code>, and <code>age</code>, with corresponding values <code>"John"</code>, <code>"Doe"</code>, and <code>30</code>.</p>
+      <h3>Accessing Object Properties</h3>
+      <p>You can access an object's properties using dot notation or bracket notation. Here are some examples:</p>
+      <pre><code>console.log(person.firstName); // Output: "John"
+console.log(person["lastName"]); // Output: "Doe"</code></pre>
+      <p>In these examples, we're accessing the <code>firstName</code> and <code>lastName</code> properties of the <code>person</code> object using dot notation and bracket notation, respectively.</p>
+      <h3>Adding and Modifying Object Properties</h3>
+      <p>You can add or modify properties of an object by simply assigning a value to a new or existing property. Here are some examples:</p>
+      <pre><code>person.age = 40;
+person.job = "Developer";</code></pre>
+      <p>In these examples, we're modifying the <code>age</code> property of the <code>person</code> object to be <code>40</code>, and adding a new property called <code>job</code> with a value of <code>"Developer"</code>.</p>
+      <h3>For-in loop</h3>
+      <p>The for-in loop is used to loop through the properties of an object. Here's an example:</p>
+      <pre><code>var person = {name: 'John', age: 30, city: 'New York'};
+for (var key in person) {
+  console.log(key + ': ' + person[key]);
+}</code></pre>
+      <p>In this example, we've declared an object called <code>person</code> with properties <code>name</code>, <code>age</code>, and <code>city</code>. We've then used the for-in loop to loop through the properties of the object and log the property name and value to the console.</p>
+      <h3>Object Methods</h3>
+      <p>An object method is a property that contains a function definition. Here's an example:</p>
+      <pre><code>var person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};</code></pre>
+      <p>In this example, we've added a new property to the <code>person</code> object called <code>fullName</code>, which is a function that returns the person's full name by concatenating the <code>firstName</code> and <code>lastName</code>
+        console.log(person.fullName()); // Output: "John Doe"</code></pre>
+        <p>In this example, we're calling the <code>fullName</code> method of the <code>person</code> object using dot notation, which returns the person's full name.</p>
+        <h3>Expected Results</h3>
+        <p>If you run the above code, you should see the following output:</p>
+        <pre><code>John
+Doe
+40
+Developer
+John Doe</code></pre>  
+        <p>The first four lines of output correspond to the console logs in the "Accessing Object Properties" and "Adding and Modifying Object Properties" sections. The last line of output corresponds to the console log in the "Object Methods" section.</p>
+        
+    </div>
+    <footer class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Learn Web Dev</a>
+        <div class="container footer-text text-white">
+            © 2023 Made with 🤍 by Vikas Bandaru
+        </div>
+    </footer>
+    <!-- Up Arrow Image -->
+    <a href="#top" id="up-arrow"><img class="uparrow"
+            src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-512.png" alt="Up Arrow"></a>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/esm/popper"
+      integrity="sha384-1/lN2QvEe1amnZQlQ8/tGTfrXrJr+hkAizxHk01yFmW1zvuzFioM+Luj+yA8MMmr"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
