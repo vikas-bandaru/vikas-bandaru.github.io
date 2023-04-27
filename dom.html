@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Basics Tutorial</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        .navbar-nav {
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            position: sticky;
+        }
+
+        /* Styling for the up array fixed position example */
+        #up-arrow {
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        .uparrow {
+            width: 50px;
+            height: 50px;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        /* flex-direction to column: to make the header, main, and footer elements stack vertically.  */
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* flex: 1 on the main element: to make it take up all the available space */
+        main {
+            flex: 1;
+        }
+
+        /* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
+
+        .footer-text {
+            padding-left: 35%;
+        }
+
+        footer {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- top menu -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Learn Web Dev</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="js.html">JavaScript Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#dom">DOM Manipulation</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1 id="dom">DOM Manipulation Tutorial</h1>
+        <p>In this tutorial, we'll learn how to manipulate the DOM using plain JavaScript.</p>
+        <!-- Your tutorial content here -->
+        <h2>Example 1: Changing Text Content</h2>
+        <p>Click the button to change the text content of the paragraph:</p>
+        <p id="example1">This is a sample paragraph.</p>
+        <button onclick="changeText()">Change Text</button>
+
+        <script>
+            function changeText() {
+                document.getElementById("example1").innerHTML = "The text content has been changed.";
+            }
+        </script>
+
+        <h2>Example 2: Changing Styling</h2>
+        <p>Click the button to change the background color of the paragraph:</p>
+        <p id="example2">This is another sample paragraph.</p>
+        <button onclick="changeStyle()">Change Style</button>
+
+        <script>
+            function changeStyle() {
+                document.getElementById("example2").style.backgroundColor = "yellow";
+            }
+        </script>
+
+        <h2>Example 3: Creating Elements</h2>
+        <p>Click the button to create a new paragraph:</p>
+        <button onclick="createParagraph()">Create Paragraph</button>
+
+        <script>
+            function createParagraph() {
+                var p = document.createElement("p");
+                var text = document.createTextNode("This is a newly created paragraph.");
+                p.appendChild(text);
+                document.body.appendChild(p);
+            }
+        </script>
+
+        <h2>Example 4: Looping through Elements</h2>
+        <p>Click the button to change the text of all paragraphs:</p>
+        <p>This is the first paragraph.</p>
+        <p>This is the second paragraph.</p>
+        <p>This is the third paragraph.</p>
+        <button onclick="changeAllParagraphs()">Change Text</button>
+        <script>
+            function changeAllParagraphs() {
+                var paragraphs = document.getElementsByTagName("p");
+                for (var i = 0; i < paragraphs.length; i++) {
+                    paragraphs[i].innerHTML = "This text has been changed.";
+                }
+            }
+        </script>
+    </div>
+    <footer class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Learn Web Dev</a>
+        <div class="container footer-text text-white">
+            © 2023 Made with 🤍 by Vikas Bandaru
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNSliN6"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Your JavaScript code here -->
+</body>
+
+</html>
