@@ -63,7 +63,7 @@ function renderCart() {
     row.appendChild(nameCell);
 
     const priceCell = document.createElement("td");
-    priceCell.textContent = "$" + item.price.toFixed(2);
+    priceCell.textContent = '₹' + item.price.toFixed(2);
     row.appendChild(priceCell);
 
     const quantityCell = document.createElement("td");
@@ -71,7 +71,7 @@ function renderCart() {
     row.appendChild(quantityCell);
 
     const totalCell = document.createElement("td");
-    totalCell.textContent = "$" + item.total.toFixed(2);
+    totalCell.textContent = '₹' + item.total.toFixed(2);
     row.appendChild(totalCell);
 
     const actionCell = document.createElement("td");
@@ -89,6 +89,6 @@ function renderCart() {
 
   // Calculate the cart total and update the cart total element
   totalPrice = cartItems.reduce((total, item) => total + item.total, 0);
-  cartTotal.textContent = "$" + totalPrice.toFixed(2);
+  cartTotal.textContent = '₹' + totalPrice.toFixed(2);
 }
 });
