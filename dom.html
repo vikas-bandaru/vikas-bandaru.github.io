@@ -129,14 +129,14 @@
 
         <div class="container border-2-secondary">
             <div class="row">
-                <div class="col-md-7 content-box">
+                <div class="col-md-7 content-box" id="content">
         <h1 id="dom">DOM Manipulation Tutorial</h1>
         <p>In this tutorial, we'll learn how to manipulate the DOM using plain JavaScript.</p>
         <!-- Your tutorial content here -->
         <h2>Example 1: Changing Text Content</h2>
         <p>Click the button to change the text content of the paragraph:</p>
         <p id="example1">This is a sample paragraph.</p>
-        <button onclick="changeText()">Change Text</button>
+        <button class="exbtn" onclick="changeText()">Change Text</button>
 
         <script>
             function changeText() {
@@ -150,11 +150,11 @@
 
             }
         </script>
-
+        
         <h2>Example 2: Changing Styling</h2>
         <p>Click the button to change the background color of the paragraph:</p>
         <p id="example2" style="color: red;">This is another sample paragraph.</p>
-        <button onclick="changeStyle()">Change Style</button>
+        <button class="exbtn" onclick="changeStyle()">Change Style</button>
 
         <script>
             function changeStyle() {
@@ -165,26 +165,28 @@
 
         <h2>Example 3: Creating Elements</h2>
         <p>Click the button to create a new paragraph:</p>
-        <button onclick="createParagraph()">Create Paragraph</button>
-
+        <button class="exbtn" onclick="createParagraph()">Create Paragraph</button>
         <script>
             function createParagraph() {
                 var p = document.createElement("p");
                 var text = document.createTextNode("This is a newly created paragraph.");
                 p.appendChild(text);
-                document.body.appendChild(p);
+
+                var button = document.getElementsByClassName("exbtn")[2];
+                var parent = button.parentNode;
+                parent.insertBefore(p, button);
             }
         </script>
 
         <h2>Example 4: Looping through Elements</h2>
-        <p>Click the button to change the text of all paragraphs:</p>
-        <p>This is the first paragraph.</p>
-        <p>This is the second paragraph.</p>
-        <p>This is the third paragraph.</p>
-        <button onclick="changeAllParagraphs()">Change Text</button>
+        <p id="example4">Click the button to change the text of all paragraphs:</p>
+        <p class="para">This is the first paragraph.</p>
+        <p class="para">This is the second paragraph.</p>
+        <p class="para">This is the third paragraph.</p>
+        <button class="exbtn" onclick="changeAllParagraphs()">Change Text</button>
         <script>
             function changeAllParagraphs() {
-                var paragraphs = document.getElementsByTagName("p");
+                var paragraphs = document.getElementsByClassName("para");
                 for (var i = 0; i < paragraphs.length; i++) {
                     paragraphs[i].innerHTML = "This text has been changed.";
                 }
