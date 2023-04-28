@@ -89,18 +89,26 @@
 
         <script>
             function changeText() {
-                document.getElementById("example1").innerHTML = "The text content has been changed.";
+                // document.getElementById("example1").innerHTML = "The text content has been changed.";
+
+                var ele = document.getElementById("example1");
+
+                ele.innerText = 'The text content has been changed NOW.';
+
+                console.log(ele);
+
             }
         </script>
 
         <h2>Example 2: Changing Styling</h2>
         <p>Click the button to change the background color of the paragraph:</p>
-        <p id="example2">This is another sample paragraph.</p>
+        <p id="example2" style="color: red;">This is another sample paragraph.</p>
         <button onclick="changeStyle()">Change Style</button>
 
         <script>
             function changeStyle() {
                 document.getElementById("example2").style.backgroundColor = "yellow";
+                console.log( document.getElementById("example2").style.backgroundColor );
             }
         </script>
 

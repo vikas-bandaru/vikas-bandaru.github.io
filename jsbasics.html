@@ -30,7 +30,55 @@
             width: 50px;
             height: 50px;
         }
+        #content-box {
+            margin: 0 10px;
+            border: 1px gainsboro solid;
+            border-radius: 10;
+            padding: 10px;
+            background-color: #f2f2f2;
+            height: 100vh;
+        }
+        
+        #code-panel {
+            height: 50vh;
+            margin-top: 40px;
+            border: 3px #cccccc solid;
+            border-radius: 10;
+            /* background-color: #cccccc; */
+            height: 40vh;
+            position: fixed;
+            top: 20px;
+            right: 0;
+            left: 57%;
+        }
 
+        #code-panel textarea {
+            height: 39vh;
+        }
+
+        #output-panel {
+            margin-top: 3px;
+            border: 3px #cccccc solid;
+            border-radius: 10;
+            position: fixed;
+            height: 40vh;
+            position: fixed;
+            bottom: 56px;
+            right: 0;
+            left: 57%;
+        }
+
+        #output {
+            margin-top: 3px;
+            border: 3px #cccccc solid;
+            border-radius: 10;
+            position: fixed;
+            height: 40vh;
+            position: fixed;
+            bottom: 57px;
+            right: 0;
+            left: 57%;
+        }
         html {
             height: 100%;
         }
@@ -61,7 +109,6 @@
 </head>
 
 <body>
-    <div class="container">
             <!-- top menu -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="index.html">Learn Web Dev</a>
@@ -90,6 +137,9 @@
                 </div>
             </nav>
 
+    <div class="container border-2-secondary">
+        <div class="row">
+            <div class="col-md-7 content-box">
         <h1 id="basics">JavaScript Basics Tutorial</h1>
         <p>Welcome to our tutorial on the basics of JavaScript! In this tutorial, we will cover variables, data types,
             operators, conditional statements, arrays, objects, and loops, and provide examples and expected results.</p>
@@ -307,6 +357,58 @@ John Doe</code></pre>
         <p>The first four lines of output correspond to the console logs in the "Accessing Object Properties" and "Adding and Modifying Object Properties" sections. The last line of output corresponds to the console log in the "Object Methods" section.</p>
         
     </div>
+    <div class="col-md-5 code-box w-100">
+        <div class="container-fluid">
+            <div id="code-panel">
+                <textarea id="code" class="form-control" placeholder="Enter HTML, CSS, JS code here"></textarea>
+            </div>
+            <div id="output-panel">
+                <iframe id="output" width="100%"></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script>
+        // get references to the code and output elements
+        const code = document.getElementById('code');
+        const output = document.getElementById('output');
+
+        // function to evaluate code entered in the textarea
+        function evaluateCode() {
+        // get the code entered in the textarea
+        const codeEntered = code.value;
+
+        // clear the iframe content
+        output.contentDocument.body.innerHTML = '';
+
+        // wrap the code in a function that logs output to the console
+        const wrappedCode = `
+            function logOutput() {
+            console.log = function() {
+                for (let i = 0; i < arguments.length; i++) {
+                const message = arguments[i];
+                const outputElement = parent.document.getElementById('output');
+                outputElement.contentDocument.write(message + '<br>');
+                }
+            };
+            ${codeEntered}
+            }
+            logOutput();
+        `;
+
+        // evaluate the wrapped code in the iframe
+        output.contentWindow.eval(wrappedCode);
+        }
+
+        // evaluate the code whenever the user types or pastes in the textarea
+        code.addEventListener('input', evaluateCode);
+        code.addEventListener('paste', evaluateCode);
+
+        // evaluate the code when the page loads
+        evaluateCode();
+
+    </script>
     <footer class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">Learn Web Dev</a>
         <div class="container footer-text text-white">
@@ -320,9 +422,9 @@ John Doe</code></pre>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/esm/popper"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/esm/popper"
       integrity="sha384-1/lN2QvEe1amnZQlQ8/tGTfrXrJr+hkAizxHk01yFmW1zvuzFioM+Luj+yA8MMmr"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Console Log to Div</title>
+</head>
+<body>
+	<h1>Console Log to Div</h1>
+	<div class="col-md-5 code-box w-100">
+        <div class="container-fluid">
+            <div id="code-panel">
+                <textarea id="code" class="form-control" placeholder="Enter HTML, CSS, JS code here"></textarea>
+            </div>
+            <div id="output-panel">
+                <iframe id="output" width="100%"></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script>
+        // get references to the code and output elements
+        const code = document.getElementById('code');
+        const output = document.getElementById('output');
+
+        // function to evaluate code entered in the textarea
+        function evaluateCode() {
+			// get the code entered in the textarea
+			const codeEntered = code.value;
+
+			// clear the iframe content
+			output.contentDocument.body.innerHTML = '';
+
+			// wrap the code in a function that logs output to the console
+			const wrappedCode = `
+				function logOutput() {
+					console.log = function() {
+						for (let i = 0; i < arguments.length; i++) {
+							const message = arguments[i];
+							const outputElement = parent.document.getElementById('output');
+							outputElement.contentDocument.write(message + '<br>');
+						}
+					};
+					${codeEntered}
+				}
+				logOutput();
+			`;
+
+			// evaluate the wrapped code in the iframe
+			output.contentWindow.eval(wrappedCode);
+        }
+
+        // evaluate the code whenever the user types or pastes in the textarea
+        code.addEventListener('input', evaluateCode);
+        code.addEventListener('paste', evaluateCode);
+
+        // evaluate the code when the page loads
+        evaluateCode();
+
+    </script>
+	<!-- <div id="console-output"></div>
+
+	<script>
+		// Get the div where you want to display the console output
+		var outputDiv = document.getElementById('console-output');
+
+		// Override console.log to output to the div
+		console.log = function(message) {
+			var outputMessage = document.createElement('p');
+			outputMessage.innerHTML = message;
+			outputDiv.appendChild(outputMessage);
+		};
+
+		// Test the console.log
+		console.log('Hello, world!');
+	</script> -->
+</body>
+</html>
