@@ -17,6 +17,32 @@
                 position: sticky;
             }
 
+            html {
+            height: 100%;
+        }
+
+        /* flex-direction to column: to make the header, main, and footer elements stack vertically.  */
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* flex: 1 on the main element: to make it take up all the available space */
+        main {
+            flex: 1;
+        }
+
+        /* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
+
+        .footer-text {
+            padding-left: 35%;
+        }
+
+        footer {
+            flex-shrink: 0;
+        }
+
     /* Style the container for the tutorial */
     .container {
       margin-top: 20px;
@@ -187,7 +213,12 @@ function changeText() {<br>
         return false;
     }
 </script>
-
+<footer class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Learn Web Dev</a>
+    <div class="container footer-text text-white">
+        © 2023 Made with 🤍 by Vikas Bandaru
+    </div>
+</footer>
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <!-- Popper.js -->
