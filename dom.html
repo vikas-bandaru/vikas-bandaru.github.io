@@ -30,6 +30,55 @@
             height: 50px;
         }
 
+        #content-box {
+            margin: 0 10px;
+            border: 1px gainsboro solid;
+            border-radius: 10;
+            padding: 10px;
+            background-color: #f2f2f2;
+            height: 100vh;
+        }
+        
+        #code-panel {
+            height: 50vh;
+            margin-top: 40px;
+            border: 3px #cccccc solid;
+            border-radius: 10;
+            /* background-color: #cccccc; */
+            height: 40vh;
+            position: fixed;
+            top: 20px;
+            right: 0;
+            left: 57%;
+        }
+
+        #code-panel textarea {
+            height: 39vh;
+        }
+
+        #output-panel {
+            margin-top: 3px;
+            border: 3px #cccccc solid;
+            border-radius: 10;
+            position: fixed;
+            height: 40vh;
+            position: fixed;
+            bottom: 56px;
+            right: 0;
+            left: 57%;
+        }
+
+        #output {
+            margin-top: 3px;
+            border: 3px #cccccc solid;
+            border-radius: 10;
+            position: fixed;
+            height: 40vh;
+            position: fixed;
+            bottom: 57px;
+            right: 0;
+            left: 57%;
+        }
         html {
             height: 100%;
         }
@@ -59,7 +108,6 @@
 </head>
 
 <body>
-    <div class="container">
         <!-- top menu -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html">Learn Web Dev</a>
@@ -79,6 +127,9 @@
             </div>
         </nav>
 
+        <div class="container border-2-secondary">
+            <div class="row">
+                <div class="col-md-7 content-box">
         <h1 id="dom">DOM Manipulation Tutorial</h1>
         <p>In this tutorial, we'll learn how to manipulate the DOM using plain JavaScript.</p>
         <!-- Your tutorial content here -->
@@ -140,12 +191,41 @@
             }
         </script>
     </div>
+    <div class="col-md-5 code-box w-100">
+        <div class="container-fluid">
+            <div id="code-panel">
+                <textarea id="code" class="form-control" placeholder="Enter HTML, CSS, JS code here"></textarea>
+            </div>
+            <div id="output-panel">
+                <iframe id="output" width="100%"></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script>
+        function updateOutput() {
+            var code = document.getElementById("code").value;
+            var output = document.getElementById("output").contentWindow.document;
+            output.open();
+            output.writeln(code);
+
+            output.close();
+        }
+
+        var codeTextarea = document.getElementById("code");
+        codeTextarea.addEventListener("input", updateOutput);
+        updateOutput();
+    </script>
     <footer class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">Learn Web Dev</a>
         <div class="container footer-text text-white">
             © 2023 Made with 🤍 by Vikas Bandaru
         </div>
     </footer>
+    <!-- Up Arrow Image -->
+    <a href="#top" id="up-arrow"><img class="uparrow"
+        src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-512.png" alt="Up Arrow"></a>
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

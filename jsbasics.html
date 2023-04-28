@@ -370,6 +370,19 @@ John Doe</code></pre>
     </div>
     </div>
     <script>
+        function updateOutput() {
+            var code = document.getElementById("code").value;
+            var output = document.getElementById("output").contentWindow.document;
+            output.open();
+            output.writeln(code);
+
+            output.close();
+        }
+
+        var codeTextarea = document.getElementById("code");
+        codeTextarea.addEventListener("input", updateOutput);
+        updateOutput();
+        /*
         // get references to the code and output elements
         const code = document.getElementById('code');
         const output = document.getElementById('output');
@@ -407,7 +420,7 @@ John Doe</code></pre>
 
         // evaluate the code when the page loads
         evaluateCode();
-
+        */
     </script>
     <footer class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">Learn Web Dev</a>
