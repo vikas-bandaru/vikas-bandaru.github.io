@@ -16,10 +16,6 @@
       float: left;
     }
 
-
-
-
-
     /* carous is class name for div enclosing myCarousel tag */
     .carous {
       width: 50vw;
@@ -33,34 +29,40 @@
       /* setting height of images inside carousel */
     }
 
-    
 
+    .navbar-nav {
+                margin: auto;
+                display: flex;
+                justify-content: space-evenly;
+                position: sticky;
+            }
 
-    html {
-      height: 100%;
-    }
+        html {
+            height: 100%;
+        }
 
-    /* flex-direction to column: to make the header, main, and footer elements stack vertically.  */
-    body {
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
+        /* flex-direction to column: to make the header, main, and footer elements stack vertically.  */
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-    /* flex: 1 on the main element: to make it take up all the available space */
-    main {
-      flex: 1;
-    }
+        /* flex: 1 on the main element: to make it take up all the available space */
+        main {
+            flex: 1;
+        }
 
-    /* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
+        /* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
 
-    .footer-text {
-      padding-left: 25%;
-    }
+        .footer-text {
+            padding-left: 35%;
+        }
 
-    footer {
-      flex-shrink: 0;
-    }
+        footer {
+            flex-shrink: 0;
+        }
+
   </style>
 </head>
 
@@ -172,12 +174,12 @@
       </div>
     </main>
   </div>
-  <footer class="navbar navbar-dark bg-dark foot">
+  <footer class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Learn Web Dev</a>
-    <div class="container footer-text">
-      <span class="navbar-text">© 2023 Made with 🤍 by Vikas Bandaru</span>
+    <div class="container footer-text text-white">
+        © 2023 Made with 🤍 by Vikas Bandaru
     </div>
-  </footer>
+</footer>
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.
