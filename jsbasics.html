@@ -370,6 +370,45 @@ John Doe</code></pre>
     </div>
     </div>
     <script>
+        // get references to the code and output elements
+        // const code = document.getElementById('code');
+        // const output = document.getElementById('output');
+
+        /*
+        // function to evaluate code entered in the textarea
+        function evaluateCode() {
+            // get the code entered in the textarea
+            const codeEntered = code.value;
+
+            // clear the iframe content
+            output.contentDocument.body.innerHTML = '';
+
+            // wrap the code in a function that logs output to the console
+            const wrappedCode = `
+                function logOutput() {
+                console.log = function() {
+                    for (let i = 0; i < arguments.length; i++) {
+                    const message = arguments[i];
+                    const outputElement = parent.document.getElementById('output');
+                    outputElement.contentDocument.write(message + '<br>');
+                    }
+                };
+                ${codeEntered}
+                }
+                logOutput();
+            `;
+
+            // evaluate the wrapped code in the iframe
+            output.contentWindow.eval(wrappedCode);
+        }
+
+        // evaluate the code whenever the user types or pastes in the textarea
+        code.addEventListener('input', evaluateCode);
+        code.addEventListener('paste', evaluateCode);
+
+        // evaluate the code when the page loads
+        evaluateCode();
+        */
         function updateOutput() {
             var code = document.getElementById("code").value;
             var output = document.getElementById("output").contentWindow.document;
@@ -382,45 +421,6 @@ John Doe</code></pre>
         var codeTextarea = document.getElementById("code");
         codeTextarea.addEventListener("input", updateOutput);
         updateOutput();
-        /*
-        // get references to the code and output elements
-        const code = document.getElementById('code');
-        const output = document.getElementById('output');
-
-        // function to evaluate code entered in the textarea
-        function evaluateCode() {
-        // get the code entered in the textarea
-        const codeEntered = code.value;
-
-        // clear the iframe content
-        output.contentDocument.body.innerHTML = '';
-
-        // wrap the code in a function that logs output to the console
-        const wrappedCode = `
-            function logOutput() {
-            console.log = function() {
-                for (let i = 0; i < arguments.length; i++) {
-                const message = arguments[i];
-                const outputElement = parent.document.getElementById('output');
-                outputElement.contentDocument.write(message + '<br>');
-                }
-            };
-            ${codeEntered}
-            }
-            logOutput();
-        `;
-
-        // evaluate the wrapped code in the iframe
-        output.contentWindow.eval(wrappedCode);
-        }
-
-        // evaluate the code whenever the user types or pastes in the textarea
-        code.addEventListener('input', evaluateCode);
-        code.addEventListener('paste', evaluateCode);
-
-        // evaluate the code when the page loads
-        evaluateCode();
-        */
     </script>
     <footer class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">Learn Web Dev</a>
