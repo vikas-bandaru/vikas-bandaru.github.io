@@ -62,7 +62,6 @@
             border-radius: 10;
             position: fixed;
             height: 40vh;
-            position: fixed;
             bottom: 56px;
             right: 0;
             left: 57%;
@@ -74,10 +73,25 @@
             border-radius: 10;
             position: fixed;
             height: 40vh;
-            position: fixed;
             bottom: 57px;
             right: 0;
             left: 57%;
+        }
+
+        .example {
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+        #example-panel {
+            height: 200px;
+            /* margin-bottom: 20px; */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 17px;
+            /* overflow-y: scroll; */
         }
         html {
             height: 100%;
@@ -133,10 +147,11 @@
         <h1 id="dom">DOM Manipulation Tutorial</h1>
         <p>In this tutorial, we'll learn how to manipulate the DOM using plain JavaScript.</p>
         <!-- Your tutorial content here -->
+                    <div class="example">
         <h2>Example 1: Changing Text Content</h2>
         <p>Click the button to change the text content of the paragraph:</p>
         <p id="example1">This is a sample paragraph.</p>
-        <button class="exbtn" onclick="changeText()">Change Text</button>
+        <button class="exbtn btn btn-primary" onclick="changeText()">Change Text</button>
 
         <script>
             function changeText() {
@@ -150,11 +165,12 @@
 
             }
         </script>
-        
+        </div>
+        <div class="example">
         <h2>Example 2: Changing Styling</h2>
         <p>Click the button to change the background color of the paragraph:</p>
         <p id="example2" style="color: red;">This is another sample paragraph.</p>
-        <button class="exbtn" onclick="changeStyle()">Change Style</button>
+        <button class="exbtn btn btn-primary" onclick="changeStyle()">Change Style</button>
 
         <script>
             function changeStyle() {
@@ -163,9 +179,30 @@
             }
         </script>
 
+        <h5 class="mt-2">Some examples of the most commonly used CSS styling functions</h5>
+        <ul>
+            <li><strong>element.style.property:</strong> sets or gets the value of a CSS property for an element</li>
+            <li><strong>element.classList.add():</strong> adds a class name to an element</li>
+            <li><strong>element.classList.remove():</strong> removes a class name from an element</li>
+            <li><strong>element.classList.toggle():</strong> toggles a class name on an element. <strong>toggle()</strong> is a method in JavaScript that can be used to toggle between adding and removing a specified class from an element.</li>
+            <li><strong>window.getComputedStyle():</strong> returns the computed style of an element <p>Computed style is a property of a DOM element in JavaScript that represents the final computed values of all CSS properties applied to the element, after taking into account any styles inherited from parent elements and any styles applied by CSS rules. It is accessed using the <strong>window.getComputedStyle()</strong> method.</p></li>
+        </ul>
+        
+        <div id="example-panel"><code>
+                let myDiv = document.getElementById('my-div');<br>
+myDiv.style.backgroundColor = 'blue';<br>
+myDiv.classList.add('my-class');<br>
+myDiv.classList.remove('my-class');<br>
+myDiv.classList.toggle('my-class');<br>
+let myStyle = window.getComputedStyle(myDiv);<br>
+console.log(myStyle.backgroundColor);</code>
+        </div>
+
+        </div>
+        <div class="example">
         <h2>Example 3: Creating Elements</h2>
         <p>Click the button to create a new paragraph:</p>
-        <button class="exbtn" onclick="createParagraph()">Create Paragraph</button>
+        <button class="exbtn btn btn-primary" onclick="createParagraph()">Create Paragraph</button>
         <script>
             function createParagraph() {
                 var p = document.createElement("p");
@@ -178,12 +215,34 @@
             }
         </script>
 
+<h5 class="mt-2">Some examples of the most commonly used CSS styling functions</h5>
+<ul>
+    <li><strong>document.createElement():</strong> creates a new HTML element</li>
+    <li><strong>element.appendChild():</strong> adds a child element to another element</li>
+    <li><strong>element.innerHTML:</strong> sets or gets the inner HTML of an element</li>
+    <li><strong>element.setAttribute():</strong> sets the value of an attribute for an element</li>
+    <li><strong>element.style.property:</strong> sets or gets the value of a CSS property for an element</li>
+    <li><strong>parent.insertBefore(p, button);</strong> The <strong>parent</strong> is a variable that represents the parent element of <strong>button</strong>. The method <strong>insertBefore()</strong> takes two arguments: the first argument <strong>p</strong> is the element to be inserted, and the second argument <strong>button</strong> is the element before which <strong>p</strong> will be inserted.</li>
+</ul>
+
+<div id="example-panel"><code>
+    let myDiv = document.createElement('div');<br>
+myDiv.innerHTML = '&lt;strong&gt;Hello World!&lt;/strong&gt;';<br>
+myDiv.setAttribute('id', 'my-div');<br>
+myDiv.style.color = 'red';<br>
+document.body.appendChild(myDiv);<br>
+parent.insertBefore(p, button);
+    </code>
+</div>
+
+        </div>
+        <div class="example">
         <h2>Example 4: Looping through Elements</h2>
         <p id="example4">Click the button to change the text of all paragraphs:</p>
         <p class="para">This is the first paragraph.</p>
         <p class="para">This is the second paragraph.</p>
         <p class="para">This is the third paragraph.</p>
-        <button class="exbtn" onclick="changeAllParagraphs()">Change Text</button>
+        <button class="exbtn btn btn-primary" onclick="changeAllParagraphs()">Change Text</button>
         <script>
             function changeAllParagraphs() {
                 var paragraphs = document.getElementsByClassName("para");
@@ -192,6 +251,7 @@
                 }
             }
         </script>
+        </div>
     </div>
     <div class="col-md-5 code-box w-100">
         <div class="container-fluid">
