@@ -9,6 +9,18 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Custom CSS -->
   <style>
+    /* Styling for the up array fixed position example */
+    #up-arrow {
+        position: fixed;
+        bottom: 40px;
+        right: 20px;
+        z-index: 9999;
+        cursor: pointer;
+    }
+    .uparrow {
+        width: 50px;
+        height: 50px;
+    }
     .navbar-nav {
                 margin: auto;
                 display: flex;
@@ -245,6 +257,9 @@ function changeColor() {<br>
         © 2023 Made with 🤍 by Vikas Bandaru
     </div>
 </footer>
+<!-- Up Arrow Image -->
+<a href="#top" id="up-arrow"><img class="uparrow"
+        src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-512.png" alt="Up Arrow"></a>
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <!-- Popper.js -->
