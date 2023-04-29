@@ -9,40 +9,33 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Custom CSS -->
   <style>
-    
     .navbar-nav {
                 margin: auto;
                 display: flex;
                 justify-content: space-evenly;
                 position: sticky;
             }
-
-            html {
+        html {
             height: 100%;
         }
-
         /* flex-direction to column: to make the header, main, and footer elements stack vertically.  */
         body {
             min-height: 100%;
             display: flex;
             flex-direction: column;
         }
-
         /* flex: 1 on the main element: to make it take up all the available space */
         main {
             flex: 1;
         }
-
         /* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
 
         .footer-text {
             padding-left: 35%;
         }
-
         footer {
             flex-shrink: 0;
         }
-
     /* Style the container for the tutorial */
     .container {
       margin-top: 20px;
@@ -88,7 +81,7 @@
 
     <h2>Example 1: OnClick Event</h2>
     <p>Click the button to change the text in the Output box.</p>
-    <button onclick="changeText()">Click me</button>
+    <button onclick="changeText()" class="btn btn-primary">Click me</button>
 
     <div class="row mt-2">
       <div class="col-sm-6">
@@ -99,8 +92,8 @@
 <code>
 &lt;script&gt;<br>
 function changeText() {<br>
-  &nbsp;&nbsp;var p = document.getElementById("example1");<br>
-  &nbsp;&nbsp;p.innerHTML = "&lt;em&gt;This is italicised text.&lt;/em&gt;";<br>
+  &nbsp;&nbsp;var para = document.getElementById("example1");<br>
+  &nbsp;&nbsp;para.innerHTML = "&lt;em&gt;This is italicised text.&lt;/em&gt;";<br>
 }<br>
 &lt;/script&gt;<br>
 </code>
@@ -116,10 +109,25 @@ function changeText() {<br>
 
     <script>
         function changeText() {
-            var p = document.getElementById("example1-output");
-            p.innerHTML = "<em>This is italicised text.</em>";
+            var para = document.getElementById("example1-output");
+            para.innerHTML = "<em>This is italicised text.</em>";
         }
     </script>
+
+    <h3>Explanation:</h3>
+        <ol>
+            <li><code><strong>&lt;button onclick="changeText()"&gt;Click me&lt;/button&gt;</strong></code> <p>This line creates a button element with the text "Click me" and attaches an event listener to it. Specifically, it listens for a click event and when the button is clicked, it will call the function <strong>changeText()</strong>.</p></li>
+            <li><code><strong>&lt;p id="example1"&gt;This is some text.&lt;/p&gt;</strong></code><p>This line creates a paragraph element with the text "This is some text." and an id of <strong>"example1"</strong>. The id attribute is used to uniquely identify this element so it can be manipulated with JavaScript.</p></li>
+            <li><code><strong>function changeText() { }</strong></code><p>This block of JavaScript code defines the function changeText() which is called when the "Click me" button is clicked.</p></li>
+            <li><code><strong>var para = document.getElementById("example1");</strong></code><p>The <strong>getElementById()</strong> method is a built-in method of the <strong>document</strong> object in JavaScript. It allows you to select an element in the HTML document based on its unique ID attribute value.
+                In this case, the ID <strong>"example1"</strong> belongs to the <strong>p</strong> element that is to be manipulated using JavaScript.
+
+                The <strong>getElementById()</strong> method is used to retrieve a reference to the <strong>p</strong> element, and it is stored in the variable <strong>para</strong> for further manipulation.</p></li>
+            <li><code><strong>p.innerHTML = "&lt;em&gt;This is italicised text.&lt;/em&gt;";</strong></code><p>It is modifying the content of the HTML element with the ID of "example1" that was previously assigned to the variable <strong>p</strong>. 
+                The <strong>.innerHTML</strong> property of an HTML element allows you to get or set the HTML content inside an element. 
+                In this case, the line is setting the <strong>innerHTML</strong> property of the <strong>p</strong> element to a new string that contains an HTML <strong>em</strong> element with the text "This is italicised text."
+                As a result of this line of code, the text "This is some text." that was previously inside the <strong>p</strong> element will be replaced with the new string containing the <strong>em</strong> element, which will display the text in italics.</p></li>
+        </ol>
 
     <h2>Example 2: OnMouseOver Event</h2>
     <p>Hover over the text to change the background color:</p>
