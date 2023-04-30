@@ -91,6 +91,7 @@
             border-radius: 4px;
             padding: 10px;
             font-size: 17px;
+            margin-top: 10px;
             /* overflow-y: scroll; */
         }
         html {
@@ -144,8 +145,8 @@
         <div class="container border-2-secondary">
             <div class="row">
                 <div class="col-md-7 content-box" id="content">
-        <h1 id="dom">DOM Manipulation Tutorial</h1>
-        <p>In this tutorial, we'll learn how to manipulate the DOM using plain JavaScript.</p>
+        <h1 id="dom">JavaScript DOM Manipulation</h1>
+        <p>In this page, we'll learn how to manipulate the DOM using plain JavaScript.</p>
         <!-- Your tutorial content here -->
                     <div class="example">
         <h2>Example 1: Changing Text Content</h2>
@@ -155,16 +156,22 @@
 
         <script>
             function changeText() {
-                // document.getElementById("example1").innerHTML = "The text content has been changed.";
-
                 var ele = document.getElementById("example1");
-
-                ele.innerText = 'The text content has been changed NOW.';
-
-                console.log(ele);
-
+                ele.innerText = 'The text content has been changed.';
             }
         </script>
+              <div id="example-panel">
+      <code>&lt;button onclick="changeText()"&gt;Click me&lt;/button&gt;<br>&lt;p id="example1"&gt;This is some text.&lt;/p&gt;</code>
+      <br>
+      <code>
+&lt;script&gt;<br>
+function changeText() {<br>
+&nbsp;&nbsp;var para = document.getElementById("example1");<br>
+&nbsp;&nbsp;para.innerText = 'The text content has been changed.';<br>
+}&nbsp;&nbsp;
+&lt;/script&gt;<br>
+      </code>
+        </div>
         </div>
         <div class="example">
         <h2>Example 2: Changing Styling</h2>
@@ -253,6 +260,7 @@ parent.insertBefore(p, button);
         </script>
         </div>
     </div>
+</div>
     <div class="col-md-5 code-box w-100">
         <div class="container-fluid">
             <div id="code-panel">
