@@ -89,9 +89,9 @@
             /* margin-bottom: 20px; */
             border: 1px solid #ccc;
             border-radius: 4px;
-            padding: 10px;
+            padding: 0 10px;
             font-size: 17px;
-            margin-top: 10px;
+            margin: 10px 0;
             /* overflow-y: scroll; */
         }
         html {
@@ -161,7 +161,7 @@
             }
         </script>
               <div id="example-panel">
-      <code>&lt;button onclick="changeText()"&gt;Click me&lt;/button&gt;<br>&lt;p id="example1"&gt;This is some text.&lt;/p&gt;</code>
+      <code>&lt;button onclick="changeText()"&gt;Change Text&lt;/button&gt;<br>&lt;p id="example1"&gt;This is some text.&lt;/p&gt;</code>
       <br>
       <code>
 &lt;script&gt;<br>
@@ -172,20 +172,37 @@ function changeText() {<br>
 &lt;/script&gt;<br>
       </code>
         </div>
+        <h4>Try it Yourself</h4>
+        <p>Apply bold and italics to the text of the paragraph using <strong>innerHTML</strong> instead of <strong>innerText</strong>.</p>
         </div>
         <div class="example">
         <h2>Example 2: Changing Styling</h2>
         <p>Click the button to change the background color of the paragraph:</p>
-        <p id="example2" style="color: red;">This is another sample paragraph.</p>
+        <p id="example2">This is another sample paragraph.</p>
         <button class="exbtn btn btn-primary" onclick="changeStyle()">Change Style</button>
 
         <script>
             function changeStyle() {
-                document.getElementById("example2").style.backgroundColor = "yellow";
-                console.log( document.getElementById("example2").style.backgroundColor );
+                var para = document.getElementById("example2");
+                para.style.backgroundColor = "yellow";
             }
         </script>
 
+<div id="example-panel">
+    <code>&lt;button onclick="changeStyle()"&gt;Change Style&lt;/button&gt;<br>&lt;p id="example2"&gt;This is another sample paragraph.&lt;/p&gt;</code>
+    <br>
+    <code>
+&lt;script&gt;<br>
+function changeStyle() {<br>
+&nbsp;&nbsp;var para = document.getElementById("example2");<br>
+&nbsp;&nbsp;para.style.backgroundColor = "yellow";<br>
+}&nbsp;&nbsp;
+&lt;/script&gt;<br>
+    </code>
+      </div>
+      <h4>Try it Yourself</h4>
+      <p>Apply red solid border around the paragraph.</p>
+      
         <h5 class="mt-2">Some examples of the most commonly used CSS styling functions</h5>
         <ul>
             <li><strong>element.style.property:</strong> sets or gets the value of a CSS property for an element</li>
@@ -222,6 +239,21 @@ console.log(myStyle.backgroundColor);</code>
             }
         </script>
 
+<div id="example-panel" class="create-para">
+    <code>&lt;button onclick="createParagraph()"&gt;Click me&lt;/button&gt;</code>
+    <br>
+    <code>
+&lt;script&gt;<br>
+function createParagraph() {<br>
+&nbsp;&nbsp;var p = document.createElement("p");<br>
+&nbsp;&nbsp;var text = document.createTextNode("This is a newly created paragraph.");<br>
+&nbsp;&nbsp;var button = document.getElementsByClassName("exbtn")[2];<br>
+&nbsp;&nbsp;button.parentNode.insertBefore(p, button);&nbsp;&nbsp;}&nbsp;&nbsp;&lt;/script&gt;<br>
+    </code>
+      </div>
+      <h4>Try it Yourself</h4>
+      <p>Create a DIV and add a child Paragraph under it.</p>
+      
 <h5 class="mt-2">Some examples of the most commonly used CSS styling functions</h5>
 <ul>
     <li><strong>document.createElement():</strong> creates a new HTML element</li>
@@ -254,10 +286,27 @@ parent.insertBefore(p, button);
             function changeAllParagraphs() {
                 var paragraphs = document.getElementsByClassName("para");
                 for (var i = 0; i < paragraphs.length; i++) {
-                    paragraphs[i].innerHTML = "This text has been changed.";
+                    paragraphs[i].innerText = "This text has been changed.";
                 }
             }
         </script>
+        
+<div id="example-panel">
+    <code>&lt;button onclick="changeAllParagraphs()"&gt;Change Text&lt;/button&gt;</code>
+    <br>
+    <code>
+&lt;script&gt;<br>
+function changeAllParagraphs() {<br>
+&nbsp;&nbsp;var paragraphs = document.getElementsByClassName("para");<br>
+&nbsp;&nbsp;for (var i = 0; i &lt; paragraphs.length; i++) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;paragraphs[i].innerText = "This text has been changed.";<br>
+&nbsp;&nbsp;} <br>
+}&nbsp;&nbsp;&lt;/script&gt;<br>
+    </code>
+      </div>
+      <h4>Try it Yourself</h4>
+      <p>Change color of all buttons to green.</p>
+      
         </div>
     </div>
 </div>
