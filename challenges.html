@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Interview Questions</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        
+        .navbar-nav {
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            position: sticky;
+        }
+
+        /* Styling for the up array fixed position example */
+        #up-arrow {
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        .uparrow {
+            width: 50px;
+            height: 50px;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        /* flex-direction to column: to make the header, main, and footer elements stack vertically.  */
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* flex: 1 on the main element: to make it take up all the available space */
+        main {
+            flex: 1;
+        }
+
+        /* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
+
+        .footer-text {
+            padding-left: 35%;
+        }
+
+        footer {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+        <!-- top menu -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Learn Web Dev</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="js.html">JavaScript Home</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+	<div class="container mt-5">
+		<h2>JavaScript Interview Questions for Frontend Developers</h2>
+		<ol>
+            <li>What is the difference between let, var, and const in JavaScript?</li>
+            <li>What is the difference between == and === in JavaScript?</li>
+            <li>What is a closure in JavaScript?</li>
+            <li>How would you compare two objects in JavaScript?</li>
+            <li>Explain the event loop in JavaScript.</li>
+            <li>How does this keyword work in JavaScript?</li>
+            <li>What is the purpose of using use strict in JavaScript?</li>
+            <li>What is the difference between synchronous and asynchronous code in JavaScript?</li>
+            <li>How would you implement inheritance in JavaScript?</li>
+            <li>What is the difference between a callback function and a promise in JavaScript?</li>
+            <li>Explain the difference between null and undefined in JavaScript.</li>
+            <li>How would you handle errors in JavaScript?</li>
+            <li>What is the purpose of try...catch block in JavaScript?</li>
+            <li>Explain the difference between a deep copy and a shallow copy in JavaScript.</li>
+            <li>How would you reverse a string in JavaScript?</li>
+        </ol>
+        <h2>Scenario-based questions</h2>
+        <ol>
+            <li>You have a web page with a button, and you want to change the text color of the button when it's clicked. How would you do that using JavaScript?</li>
+            <li>You have a list of elements on a web page, and you want to remove one of the elements from the list when it's clicked. How would you do that using JavaScript?</li>
+            <li>You have a form on a web page, and you want to validate the input fields before submitting the form. How would you do that using JavaScript?</li>
+            <li>You have a dropdown menu on a web page, and you want to show or hide some content based on the selected option. How would you do that using JavaScript?</li>
+            <li>You have a web page with a slider, and you want to change the background color of the page based on the slider value. How would you do that using JavaScript?</li>
+            <li>You have a web page with a list of images, and you want to create a gallery where the images can be viewed in a larger size when clicked. How would you do that using JavaScript?</li>
+            <li>You have a web page with a search bar, and you want to filter a list of items based on the search input. How would you do that using JavaScript?</li>
+            <li>You have a web page with a button, and you want to display an alert message when the button is clicked. How would you do that using JavaScript?</li>
+            <li>You have a web page with a form, and you want to save the form data to the local storage when it's submitted. How would you do that using JavaScript?</li>
+            <li>You have a web page with a video player, and you want to show a message when the video is finished playing. How would you do that using JavaScript?</li>
+        </ol>
+	</div>
+    <footer class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Learn Web Dev</a>
+        <div class="container footer-text text-white">
+            © 2023 Made with 🤍 by Vikas Bandaru
+        </div>
+    </footer>
+    <!-- Up Arrow Image -->
+    <a href="#top" id="up-arrow"><img class="uparrow"
+        src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-512.png" alt="Up Arrow"></a>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNSliN6"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

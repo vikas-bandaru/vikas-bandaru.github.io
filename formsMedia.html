@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-md-6 border rounded p-4 mt-5">
+        <h1 class="text-center mb-4">User Registration Form</h1>
+        <form id="registration-form" method="post">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+            <small class="text-muted">Must be at least 3 characters long and contain only letters, numbers, and underscores.</small>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+            <small class="text-muted">Must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*).</small>
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+          </div>
+          <div class="form-group">
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script src="forms.js"></script>
+</body>
+</html>
