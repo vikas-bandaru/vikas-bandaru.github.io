@@ -78,7 +78,7 @@
             padding: 0 10px;
             font-size: 17px;
             margin: 10px 0;
-            /* overflow-y: scroll; */
+            overflow-y: scroll;
         }
         
         /* Styling for the up array fixed position example */
@@ -289,14 +289,15 @@ console.log(myStyle.backgroundColor);</code>
         <button class="accordion"><strong>Check Code here</strong></button>
         <div class="hidden-panel">
 <div id="example-panel" class="create-para">
-    <code>&lt;button onclick="createParagraph()"&gt;Click me&lt;/button&gt;</code>
+    <code>&lt;button class="exbtn" onclick="changeStyle()"&gt;Change Style&lt;/button&gt;<br>
+    &lt;button class="exbtn" onclick="createParagraph()"&gt;Create Paragraph&lt;/button&gt;</code>
     <br>
     <code>
 &lt;script&gt;<br>
 function createParagraph() {<br>
 &nbsp;&nbsp;var p = document.createElement("p");<br>
 &nbsp;&nbsp;var text = document.createTextNode("This is a newly created paragraph.");<br>
-&nbsp;&nbsp;var button = document.getElementsByClassName("exbtn")[2];<br>
+&nbsp;&nbsp;var button = document.getElementsByClassName("exbtn")[1];<br>
 &nbsp;&nbsp;button.parentNode.insertBefore(p, button);&nbsp;&nbsp;}&nbsp;&nbsp;&lt;/script&gt;<br>
     </code>
       </div>
@@ -347,7 +348,12 @@ parent.insertBefore(p, button);
         <button class="accordion"><strong>Check Code here</strong></button>
         <div class="hidden-panel">
 <div id="example-panel">
-    <code>&lt;button onclick="changeAllParagraphs()"&gt;Change Text&lt;/button&gt;</code>
+    <code>
+&lt;p class="para"&gt;This is the first paragraph.&lt;/p&gt;<br>
+&lt;p class="para"&gt;This is the second paragraph.&lt;/p&gt;<br>
+&lt;p class="para"&gt;This is the third paragraph.&lt;/p&gt;<br>
+&lt;button onclick="changeAllParagraphs()"&gt;Change Text&lt;/button&gt;
+    </code>
     <br>
     <code>
 &lt;script&gt;<br>
