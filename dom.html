@@ -297,6 +297,7 @@ console.log(myStyle.backgroundColor);</code>
 function createParagraph() {<br>
 &nbsp;&nbsp;var p = document.createElement("p");<br>
 &nbsp;&nbsp;var text = document.createTextNode("This is a newly created paragraph.");<br>
+&nbsp;&nbsp;p.appendChild(text);<br>
 &nbsp;&nbsp;var button = document.getElementsByClassName("exbtn")[1];<br>
 &nbsp;&nbsp;button.parentNode.insertBefore(p, button);&nbsp;&nbsp;}&nbsp;&nbsp;&lt;/script&gt;<br>
     </code>
