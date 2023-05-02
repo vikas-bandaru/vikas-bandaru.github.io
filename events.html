@@ -171,14 +171,14 @@ function changeText() {<br>
       <div class="col-sm-6">
         <h3>Output:</h3>
         <div id="output-panel">
-          <p id="example-output"><em>This is some text.</em></p>
+          <p id="example-output">This is some text.</p>
         </div>
       </div>
     </div>
 
     <script>
         function changeText() {
-            var para = document.getElementById("example1-output");
+            var para = document.getElementById("example-output");
             para.innerHTML = "<em>This is italicised text.</em>";
         }
     </script>
@@ -291,7 +291,7 @@ function changeColor() {<br>
   <div class="col-sm-6">
     <h3>Code:</h3>
     <div id="code-panel">
-      <code>&lt;form onsubmit="return greetUser()"&gt;<br>&nbsp;&nbsp;&lt;div class="form-group"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" class="form-control" id="name"&gt;<br>&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;<br>&lt;/form&gt;<br>&lt;p id="example4"&gt;&lt;/p&gt;<br>&lt;script&gt;<br>function greetUser() {<br>&nbsp;&nbsp;const name = document.getElementById("name").value;<br>&nbsp;&nbsp;document.getElementById("example4").innerHTML = "Hello, " + name + "!";<br>&nbsp;&nbsp;return false;<br>}<br>&lt;/script&gt;</code>
+      <code>&lt;form onsubmit="return greetUser()"&gt;<br>&nbsp;&nbsp;&lt;div class="form-group"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" class="form-control" id="name"&gt;<br>&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;<br>&lt;/form&gt;<br>&lt;p id="example4"&gt;&lt;/p&gt;<br>&lt;script&gt;<br>function greetUser() {<br>&nbsp;&nbsp;const name = document.getElementById("name").value;<br>&nbsp;&nbsp;document.getElementById("example4").innerHTML = "Hello, " + name + "! Welcome to our website.";<br>&nbsp;&nbsp;return false;<br>}<br>&lt;/script&gt;</code>
     </div>
   </div>
   <div class="col-sm-6">
