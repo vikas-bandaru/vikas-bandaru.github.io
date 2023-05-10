@@ -74,10 +74,27 @@
             <img style="display: block;" src="images/main-html-code.PNG" alt="first-code">
         </li>
         <li>Generate a new component: <strong><code>ng generate component &lt;component-name&gt;</code></strong>
+            <p><strong><code>ng generate component dev-list</code></strong><br>The following folder is created with it's respectives files.</p>
             <img style="display: block;" src="images/components.png" alt="new component">
             This new component dev-list is added inside app component. App Component is outermost component which is auto-generated when a new angular project is created.
         </li>
-        <li>Add new component selector to app template page</li>
+        <li>Add new component selector to app template page
+            <h5>Where to find the selector value?</h5>
+            <p>In the above step, we created a component called <strong>dev-list</strong>. Go to <strong>dev-list</strong> folder and open it's <strong>component.ts</strong> file. 
+            <img style="display: block;" src="images/component-ts.png" alt="component-ts image">
+            <ul>
+                <li>Copy the value of selector property of @component decorator in dev-list.component.ts</li>
+                <li>Go to parent component's template page: app.component.html file</li>
+                <li>Type a tag with that selector value as tag name.</li>
+                <img style="display: block;" src="images/app-component-tag.png" alt="child component tag">
+                <li>Check the dev-list.component.html file. It already contains an auto-generated code.</li>
+                <img style="display: block;" src="images/dev-list-component-html.png" alt="child component html">
+            </ul>
+            </p>
+        </li>
+        <li>Run the project and check the result on browser. <br>
+            <strong><code>ng serve --open</code></strong>
+        </li>
         <li>Generate a Developer class</li>
         <li>In DevListComponent, create sample data</li>
         <li>In dev-list template file, build HTML table by looping over data</li>
