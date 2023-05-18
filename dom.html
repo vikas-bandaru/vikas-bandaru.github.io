@@ -1,176 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: JavaScript Basics Tutorial
+custom_css: js_dom
+---
+<button id="openbtn" class="openbtn" onclick="openNav()">☰</button>
 
-<head>
-    <meta charset="UTF-8">
-    <title>JavaScript Basics Tutorial</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <style>
-        .navbar-nav {
-            margin: auto;
-            display: flex;
-            justify-content: space-evenly;
-            position: sticky;
-        }
-
-        #content-box {
-            margin: 0 10px;
-            border: 1px gainsboro solid;
-            border-radius: 10;
-            padding: 10px;
-            background-color: #f2f2f2;
-            height: 100vh;
-        }
-        
-        #code-panel {
-            height: 50vh;
-            margin-top: 40px;
-            border: 3px #cccccc solid;
-            border-radius: 10;
-            /* background-color: #cccccc; */
-            height: 40vh;
-            position: fixed;
-            top: 20px;
-            right: 0;
-            left: 57%;
-        }
-
-        #code-panel textarea {
-            height: 39vh;
-        }
-
-        #output-panel {
-            margin-top: 3px;
-            border: 3px #cccccc solid;
-            border-radius: 10;
-            position: fixed;
-            height: 40vh;
-            bottom: 56px;
-            right: 0;
-            left: 57%;
-        }
-
-        #output {
-            margin-top: 3px;
-            border: 3px #cccccc solid;
-            border-radius: 10;
-            position: fixed;
-            height: 40vh;
-            bottom: 57px;
-            right: 0;
-            left: 57%;
-        }
-
-        .example {
-            border: 1px solid #cccccc;
-            border-radius: 10px;
-            padding: 10px;
-            margin-bottom: 5px;
-        }
-        #example-panel {
-            height: 200px;
-            /* margin-bottom: 20px; */
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            padding: 0 10px;
-            font-size: 17px;
-            margin: 10px 0;
-            overflow-y: scroll;
-        }
-        
-        /* Styling for the up array fixed position example */
-        #up-arrow {
-            position: fixed;
-            bottom: 40px;
-            right: 20px;
-            z-index: 9999;
-            cursor: pointer;
-        }
-
-        .uparrow {
-            width: 50px;
-            height: 50px;
-        }
-
-        html {
-            height: 100%;
-        }
-
-        /* flex-direction to column: to make the header, main, and footer elements stack vertically.  */
-        body {
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* flex: 1 on the main element: to make it take up all the available space */
-        main {
-            flex: 1;
-        }
-
-        /* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
-
-        .footer-text {
-            padding-left: 35%;
-        }
-
-        footer {
-            flex-shrink: 0;
-        }
-        /* Style the buttons that are used to open and close the accordion panel */
-        .accordion {
-            margin: 5px 0;
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 5px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            outline: none;
-            transition: 0.4s;
-        }
-
-        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-        .accordion:hover {
-            background-color: #ccc;
-        }
-
-        /* Style the accordion panel. Note: hidden by default */
-        .hidden-panel {
-            padding: 0 18px;
-            background-color: white;
-            display: none;
-            overflow: hidden;
-        }
-    </style>
-</head>
-
-<body>
-        <!-- top menu -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Learn Web Dev</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="js.html">JavaScript Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#dom">DOM Manipulation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="events.html">JavaScript Events</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+<!-- top menu -->
 
         <div class="container border-2-secondary">
             <div class="row">
@@ -289,20 +124,14 @@ console.log(myStyle.backgroundColor);</code>
         <button class="accordion"><strong>Check Code here</strong></button>
         <div class="hidden-panel">
 <div id="example-panel" class="create-para">
-    <code>
-    &lt;div&gt;<br>
-        &lt;button class="exbtn" onclick="changeStyle()"&gt;Change Style&lt;/button&gt;<br>
-    &lt;button class="exbtn" onclick="createParagraph()"&gt;Create Paragraph&lt;/button&gt;<br>
-    &lt;/div&gt;
-</code>
+    <code>&lt;button onclick="createParagraph()"&gt;Click me&lt;/button&gt;</code>
     <br>
     <code>
 &lt;script&gt;<br>
 function createParagraph() {<br>
 &nbsp;&nbsp;var p = document.createElement("p");<br>
 &nbsp;&nbsp;var text = document.createTextNode("This is a newly created paragraph.");<br>
-&nbsp;&nbsp;p.appendChild(text);<br>
-&nbsp;&nbsp;var button = document.getElementsByClassName("exbtn")[1];<br>
+&nbsp;&nbsp;var button = document.getElementsByClassName("exbtn")[2];<br>
 &nbsp;&nbsp;button.parentNode.insertBefore(p, button);&nbsp;&nbsp;}&nbsp;&nbsp;&lt;/script&gt;<br>
     </code>
       </div>
@@ -353,12 +182,7 @@ parent.insertBefore(p, button);
         <button class="accordion"><strong>Check Code here</strong></button>
         <div class="hidden-panel">
 <div id="example-panel">
-    <code>
-&lt;p class="para"&gt;This is the first paragraph.&lt;/p&gt;<br>
-&lt;p class="para"&gt;This is the second paragraph.&lt;/p&gt;<br>
-&lt;p class="para"&gt;This is the third paragraph.&lt;/p&gt;<br>
-&lt;button onclick="changeAllParagraphs()"&gt;Change Text&lt;/button&gt;
-    </code>
+    <code>&lt;button onclick="changeAllParagraphs()"&gt;Change Text&lt;/button&gt;</code>
     <br>
     <code>
 &lt;script&gt;<br>
@@ -407,7 +231,13 @@ function changeAllParagraphs() {<br>
             </div>
         </div>
     </div>
+</div>
+<footer class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Learn Web Dev</a>
+    <div class="container footer-text text-white">
+        © 2023 Made with 🤍 by Vikas Bandaru
     </div>
+</footer>
     </div>
     <script>
         function updateOutput() {
@@ -423,12 +253,7 @@ function changeAllParagraphs() {<br>
         codeTextarea.addEventListener("input", updateOutput);
         updateOutput();
     </script>
-    <footer class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Learn Web Dev</a>
-        <div class="container footer-text text-white">
-            © 2023 Made with 🤍 by Vikas Bandaru
-        </div>
-    </footer>
+    
     <!-- Up Arrow Image -->
     <a href="#top" id="up-arrow"><img class="uparrow"
         src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-512.png" alt="Up Arrow"></a>
@@ -442,6 +267,3 @@ function changeAllParagraphs() {<br>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-</body>
-
-</html>

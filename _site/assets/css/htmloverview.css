@@ -1,0 +1,22 @@
+
+    /* carous is class name for div enclosing myCarousel tag */
+    .carous {
+        width: 50vw;
+        /* setting width of carous div to 80% of viewport width */
+        height: 100vh;
+        /* setting height of carous div to 60% of viewport width */
+      }
+  
+      .carous img {
+        height: 600px;
+        /* setting height of images inside carousel */
+      }
+      /* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
+  
+      .footer-text {
+        padding-left: 35%;
+      }
+  
+      footer {
+        flex-shrink: 0;
+      }

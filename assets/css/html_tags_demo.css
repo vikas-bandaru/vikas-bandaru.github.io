@@ -1,0 +1,12 @@
+.navbar-nav {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  /* add some styles to see the differences */
+  header, section, article, aside, footer {
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      justify-self: center;
+  }

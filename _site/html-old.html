@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How to Learn HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    #sidebar {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      overflow-y: auto;
+      padding: 0;
+      height: 100vh;
+      width: 200px;
+      float: left;
+  }
+  </style>
+</head>
+<body>
+  
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3" id="sidebar">
+            <div class="d-flex flex-column flex-shrink-0 p-3 bg-dark" style="width: 280px; height: 100vh;">
+                <a href="index.html"
+                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                    <span class="fs-4">Intro to Web Dev</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" id="homeLink">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="html.html" id="htmlLink">HTML Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tags.html" id="tagsLink">HTML Tags</a></li>
+                    <li class="nav-item"><a class="nav-link" href="htmlexercises1.html" id="exercises1Link">HTML Tag Examples 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="htmlexercises2.html" id="exercises2Link">HTML Tag Examples 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html5demo.html" id="html5demoLink">HTML 5 Tags Demo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html" id="cssLink">CSS Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cssselectors.html" id="selectorsLink">CSS Selectors &amp; Properties</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cssboxmodel.html" id="boxModelLink">CSS Box Model</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cssFloatPosDisp.html" id="floatPosDispLink">CSS Float, Position, Display</a></li>
+                    <li class="nav-item"><a class="nav-link" href="csslayouts.html" id="layoutsLink">CSS Layouts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap.html" id="bootstrapLink">CSS Bootstrap</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="js.html" id="jsLink">JS Overview</a></li>
+                    <li class="nav-item">
+                        <a href="playground.html" class="nav-link" id="playgroundLink">
+                            Playground
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+<div class="col-md-9">
+  <h1 class="text-center">How to Learn HTML</h1>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>1. Start with the Basics</h2>
+      <p>HTML stands for Hypertext Markup Language. It's the standard language used to create web pages. Start with the basics, like creating headings, paragraphs, and links.</p>
+      <p>Check the list of tags <a href="tags.html">here</a>.</p>
+    </div>
+    <div class="col-md-6">
+      <h2>2. Use Online Resources</h2>
+      <p>There are many free online resources available to learn HTML. Use websites like W3Schools, Codecademy, and Udemy to learn the language.</p>
+      <p>Check list of Online Resources <a href="introwebdev.html#resources">here</a>.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2>3. Practice with Examples</h2>
+      <p>The best way to learn HTML is by doing. Practice creating web pages with examples and templates. Use websites like CodePen and JSFiddle to practice.</p>
+      <p>Practice <a href="htmlexercises1.html">here</a>.</p>
+    </div>
+    <div class="col-md-6">
+      <h2>4. Join a Community</h2>
+      <p>Join an online community of web developers and designers. Websites like GitHub, Stack Overflow, and Reddit have active communities that can help you learn HTML.</p>
+    </div>
+  </div> 
+  <p style="text-align: center; color: black; margin-top: auto;">© 2023 Made with 🖤 by <strong>Vikas Bandaru</strong></p>
+
+</div>
+</div>
+</div>
+
+<script>
+  // Get all the links
+  var links = document.querySelectorAll(".nav-link");
+
+  // Loop through the links
+  for (var i = 0; i < links.length; i++) {
+          // Add a click event listener to each link
+          links[i].addEventListener("click", function(event) {
+              // event.preventDefault(); // prevent default link behavior
+              // Remove the "active" class from all links
+              for (var j = 0; j < links.length; j++) {
+                  links[j].classList.remove("active");
+              }
+              // Add the "active" class to the clicked link
+              this.classList.add("active");
+          });
+  }
+  </script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+</body>
+</html>

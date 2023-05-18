@@ -1,114 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Javascript Basics Tutorial
+custom_css: js_basics
+---
+<button id="openbtn" class="openbtn" onclick="openNav()">☰</button>
 
-<head>
-    <meta charset="UTF-8">
-    <title>JavaScript Basics Tutorial</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <style>
-        
-        .navbar-nav {
-                margin: auto;
-                display: flex;
-                justify-content: space-evenly;
-                position: sticky;
-            }
-
-        /* Styling for the up array fixed position example */
-        #up-arrow {
-            position: fixed;
-            bottom: 40px;
-            right: 20px;
-            z-index: 9999;
-            cursor: pointer;
-        }
-
-        .uparrow {
-            width: 50px;
-            height: 50px;
-        }
-        #content-box {
-            margin: 0 10px;
-            border: 1px gainsboro solid;
-            border-radius: 10;
-            padding: 10px;
-            background-color: #f2f2f2;
-            height: 100vh;
-        }
-        
-        #code-panel {
-            height: 50vh;
-            margin-top: 40px;
-            border: 3px #cccccc solid;
-            border-radius: 10;
-            /* background-color: #cccccc; */
-            height: 40vh;
-            position: fixed;
-            top: 20px;
-            right: 0;
-            left: 57%;
-        }
-
-        #code-panel textarea {
-            height: 39vh;
-        }
-
-        #output-panel {
-            margin-top: 3px;
-            border: 3px #cccccc solid;
-            border-radius: 10;
-            position: fixed;
-            height: 40vh;
-            position: fixed;
-            bottom: 56px;
-            right: 0;
-            left: 57%;
-        }
-
-        #output {
-            margin-top: 3px;
-            border: 3px #cccccc solid;
-            border-radius: 10;
-            position: fixed;
-            height: 40vh;
-            position: fixed;
-            bottom: 57px;
-            right: 0;
-            left: 57%;
-        }
-        html {
-            height: 100%;
-        }
-
-        /* flex-direction to column: to make the header, main, and footer elements stack vertically.  */
-        body {
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* flex: 1 on the main element: to make it take up all the available space */
-        main {
-            flex: 1;
-        }
-
-        /* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
-
-        .footer-text {
-            padding-left: 35%;
-        }
-
-        footer {
-            flex-shrink: 0;
-        }
-
-    </style>
-</head>
-
-<body>
             <!-- top menu -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="index.html">Learn Web Dev</a>
@@ -444,5 +340,3 @@ John Doe</code></pre>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
-  </body>
-</html>

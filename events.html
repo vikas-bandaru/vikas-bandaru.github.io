@@ -1,102 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>JavaScript Events</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-  <style>
-    /* Styling for the up array fixed position example */
-    #up-arrow {
-        position: fixed;
-        bottom: 40px;
-        right: 20px;
-        z-index: 9999;
-        cursor: pointer;
-    }
-    .uparrow {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .navbar-nav {
-                margin: auto;
-                display: flex;
-                justify-content: space-evenly;
-                position: sticky;
-            }
+---
+layout: default
+title: JavaScript Basics Tutorial
+custom_css: js_events
+---
+<button id="openbtn" class="openbtn" onclick="openNav()">☰</button>
 
-        html {
-            height: 100%;
-        }
-        /* flex-direction to column: to make the header, main, and footer elements stack vertically.  */
-        body {
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        /* flex: 1 on the main element: to make it take up all the available space */
-        main {
-            flex: 1;
-        }
-        /* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
-
-        .footer-text {
-            padding-left: 35%;
-        }
-        footer {
-            flex-shrink: 0;
-        }
-    /* Style the container for the tutorial */
-    .container {
-      margin-top: 20px;
-    }
-    /* Style the code and output panels */
-    #code-panel, #output-panel {
-      height: 200px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      overflow-y: scroll;
-    }
-    textarea {
-      height: 200px;
-      border: 1px solid #ccc;
-    }
-    /* Style the buttons */
-    button {
-      margin-right: 10px;
-    }
-  </style>
-</head>
-<body>
-    <!-- top menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Learn Web Dev</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="js.html">JavaScript Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="#events">JavaScript Events</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#examples">JavaScript Events Examples</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="dom.html">DOM Manipulation</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
   <div class="container">
     <h1 class="text-center" id="events">JavaScript Events Tutorial</h1>
@@ -171,14 +79,14 @@ function changeText() {<br>
       <div class="col-sm-6">
         <h3>Output:</h3>
         <div id="output-panel">
-          <p id="example-output">This is some text.</p>
+          <p id="example-output"><em>This is some text.</em></p>
         </div>
       </div>
     </div>
 
     <script>
         function changeText() {
-            var para = document.getElementById("example-output");
+            var para = document.getElementById("example1-output");
             para.innerHTML = "<em>This is italicised text.</em>";
         }
     </script>
@@ -291,7 +199,7 @@ function changeColor() {<br>
   <div class="col-sm-6">
     <h3>Code:</h3>
     <div id="code-panel">
-      <code>&lt;form onsubmit="return greetUser()"&gt;<br>&nbsp;&nbsp;&lt;div class="form-group"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" class="form-control" id="name"&gt;<br>&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;<br>&lt;/form&gt;<br>&lt;p id="example4"&gt;&lt;/p&gt;<br>&lt;script&gt;<br>function greetUser() {<br>&nbsp;&nbsp;const name = document.getElementById("name").value;<br>&nbsp;&nbsp;document.getElementById("example4").innerHTML = "Hello, " + name + "! Welcome to our website.";<br>&nbsp;&nbsp;return false;<br>}<br>&lt;/script&gt;</code>
+      <code>&lt;form onsubmit="return greetUser()"&gt;<br>&nbsp;&nbsp;&lt;div class="form-group"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" class="form-control" id="name"&gt;<br>&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;<br>&lt;/form&gt;<br>&lt;p id="example4"&gt;&lt;/p&gt;<br>&lt;script&gt;<br>function greetUser() {<br>&nbsp;&nbsp;const name = document.getElementById("name").value;<br>&nbsp;&nbsp;document.getElementById("example4").innerHTML = "Hello, " + name + "!";<br>&nbsp;&nbsp;return false;<br>}<br>&lt;/script&gt;</code>
     </div>
   </div>
   <div class="col-sm-6">
@@ -345,5 +253,3 @@ function changeColor() {<br>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <!-- Bootstrap JS -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>

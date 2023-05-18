@@ -1,64 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Interview Questions</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <style>
+---
+layout: default
+title: Interview Questions
+---
+<button id="openbtn" class="openbtn" onclick="openNav()">☰</button>
+
+
         
-        .navbar-nav {
-            margin: auto;
-            display: flex;
-            justify-content: space-evenly;
-            position: sticky;
-        }
-
-        /* Styling for the up array fixed position example */
-        #up-arrow {
-            position: fixed;
-            bottom: 40px;
-            right: 20px;
-            z-index: 9999;
-            cursor: pointer;
-        }
-
-        .uparrow {
-            width: 50px;
-            height: 50px;
-        }
-
-        html {
-            height: 100%;
-        }
-
-        /* flex-direction to column: to make the header, main, and footer elements stack vertically.  */
-        body {
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* flex: 1 on the main element: to make it take up all the available space */
-        main {
-            flex: 1;
-        }
-
-        /* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
-
-        .footer-text {
-            padding-left: 35%;
-        }
-
-        footer {
-            flex-shrink: 0;
-        }
-    </style>
-</head>
-<body>
+       
         <!-- top menu -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html">Learn Web Dev</a>
@@ -117,15 +65,4 @@
     <!-- Up Arrow Image -->
     <a href="#top" id="up-arrow"><img class="uparrow"
         src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-512.png" alt="Up Arrow"></a>
-    <!-- Bootstrap JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNSliN6"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+
