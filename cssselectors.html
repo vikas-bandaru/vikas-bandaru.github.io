@@ -1,166 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Learn CSS
+custom_css: css_selectors
+---
+<button id="openbtn" class="openbtn" onclick="openNav()">☰</button>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Learn CSS</title>
-  <!-- Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <style>
-    #sidebar {
-      position: sticky;
-      top: 0;
-      z-index: 1;
-      overflow-y: auto;
-      padding: 0;
-      height: 100vh;
-      width: 200px;
-      float: left;
-  }
-
-    /* CSS code for examples */
-    /* Element Selector Example */
-    p {
-      color: red;
-    }
-
-    /* Class Selector Example */
-    .example {
-      font-weight: bold;
-    }
-
-    /* ID Selector Example */
-    #example {
-      text-decoration: underline;
-    }
-
-    /* Attribute Selector Example */
-    a[target="_blank"] {
-      color: blue;
-    }
-
-    /* Pseudo-class Example */
-    a:hover {
-      font-size: 20px;
-    }
-
-    /* CSS code for Properties and Values */
-    .green1 {
-      color: green;
-    }
-
-    .green2 {
-      color: #00ff00;
-    }
-
-    .green3 {
-      color: rgb(0, 255, 0);
-    }
-
-    .background-color {
-      background-color: blue;
-      color: white;
-    }
-
-    .background-image {
-      background-image: url("https://hips.hearstapps.com/hmg-prod/images/assortment-of-colorful-ripe-tropical-fruits-top-royalty-free-image-995518546-1564092355.jpg");
-      height: 100px;
-      color: white;
-    }
-
-    .linear-gradient {
-      background: linear-gradient(to bottom, red, yellow);
-    }
-
-    .px {
-      font-size: 16px;
-      margin: 0;
-    }
-
-    .em {
-      font-size: 2.5em;
-      margin: 0;
-    }
-
-    .pt {
-      font-size: 12pt;
-      margin: 0;
-    }
-
-    .perc {
-      font-size: 200%;
-      margin: 0;
-    }
-
-    .rem {
-      font-size: 1.3rem;
-      margin: 0;
-    }
-
-    .xxlarge {
-      font-size: xx-large;
-      margin: 0;
-    }
-
-    .vh {
-      font-size: 10vh;
-    }
-
-    .justify {
-      text-align: justify;
-    }
-
-    .leftjustify {
-      text-align: left;
-      text-align: justify;
-    }
-  </style>
-</head>
-
-<body>
 
   <div class="container-fluid">
     <div class="row">
-        <div class="col-md-3" id="sidebar">
-            <div class="d-flex flex-column flex-shrink-0 p-3 bg-dark" style="width: 280px; height: 100vh;">
-                <a href="index.html"
-                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                    <span class="fs-4">Intro to Web Dev</span>
-                </a>
-                <hr>
-                <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link" id="homeLink">
-                            Home
-                        </a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="html.html" id="htmlLink">HTML Overview</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tags.html" id="tagsLink">HTML Tags</a></li>
-                    <li class="nav-item"><a class="nav-link" href="htmlexercises1.html" id="exercises1Link">HTML Tag Examples 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="htmlexercises2.html" id="exercises2Link">HTML Tag Examples 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="html5demo.html" id="html5demoLink">HTML 5 Tags Demo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="css.html" id="cssLink">CSS Overview</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cssselectors.html" id="selectorsLink">CSS Selectors &amp; Properties</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cssboxmodel.html" id="boxModelLink">CSS Box Model</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cssFloatPosDisp.html" id="floatPosDispLink">CSS Float, Position, Display</a></li>
-                    <li class="nav-item"><a class="nav-link" href="csslayouts.html" id="layoutsLink">CSS Layouts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="bootstrap.html" id="bootstrapLink">CSS Bootstrap</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="js.html" id="jsLink">JS Overview</a></li>
-                    <li class="nav-item">
-                        <a href="playground.html" class="nav-link" id="playgroundLink">
-                            Playground
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
 
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -377,6 +224,3 @@
           });
     }
     </script>
-</body>
-
-</html>

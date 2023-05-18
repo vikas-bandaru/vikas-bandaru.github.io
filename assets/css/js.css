@@ -1,0 +1,49 @@
+  /* Styling for the up array fixed position example */
+  #up-arrow {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.uparrow {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar-nav {
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        position: sticky;
+    }
+
+
+/* flex-shrink: 0 on the footer element: to prevent it from shrinking and staying at the bottom of the page */
+
+.footer-text {
+    padding-left: 35%;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+*, ::after, ::before {
+    box-sizing: content-box;
+}
+
+
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}

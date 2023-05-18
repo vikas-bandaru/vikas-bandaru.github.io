@@ -1,119 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>How to Learn Web Development</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css"> -->
-  <style>
-    #sidebar {
-      position: sticky;
-      top: 0;
-      z-index: 1;
-      overflow-y: auto;
-      padding: 0;
-      height: 100vh;
-      width: 200px;
-      float: left;
-  }
-    /* CSS Grid Layout */
-    
-		.container {
-			margin-top: 50px;
-		}
-		.grid-row {
-			border: 1px solid black;
-			padding: 20px;
-			margin-bottom: 10px;
-		}
-		.col {
-			border: 1px solid black;
-			padding: 20px;
-			background-color: #f0f0f0;
-		}
-		.col-6 {
-			background-color: #d3d3d3;
-		}
-        /* CSS Flexbox Layout */
-        
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-			background-color: #f5f5f5;
-		}
-		.container {
-			margin-top: 30px;
-			margin-bottom: 30px;
-			padding: 20px;
-			background-color: #fff;
-			border-radius: 5px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-		}
-		h1 {
-			margin-top: 0;
-			margin-bottom: 20px;
-			text-align: center;
-		}
-		.flex-row {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-		}
-		.box {
-			flex-basis: 30%;
-			margin-bottom: 20px;
-			padding: 20px;
-			background-color: #f2f2f2;
-			border-radius: 5px;
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-			text-align: center;
-		}
-  </style>
-</head>
-<body>
+---
+layout: default
+title: How to Learn Web Development
+---
+<button id="openbtn" class="openbtn" onclick="openNav()">☰</button>
+
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-3" id="sidebar">
-				<div class="d-flex flex-column flex-shrink-0 p-3 bg-dark" style="width: 280px; height: 100vh;">
-					<a href="index.html"
-						class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-						<svg class="bi me-2" width="40" height="32">
-							<use xlink:href="#bootstrap"></use>
-						</svg>
-						<span class="fs-4">Intro to Web Dev</span>
-					</a>
-					<hr>
-					<ul class="nav nav-pills flex-column mb-auto">
-						<li class="nav-item">
-							<a href="index.html" class="nav-link" id="homeLink">
-								Home
-							</a>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="html.html" id="htmlLink">HTML Overview</a></li>
-						<li class="nav-item"><a class="nav-link" href="tags.html" id="tagsLink">HTML Tags</a></li>
-						<li class="nav-item"><a class="nav-link" href="htmlexercises1.html" id="exercises1Link">HTML Tag Examples 1</a></li>
-						<li class="nav-item"><a class="nav-link" href="htmlexercises2.html" id="exercises2Link">HTML Tag Examples 2</a></li>
-						<li class="nav-item"><a class="nav-link" href="html5demo.html" id="html5demoLink">HTML 5 Tags Demo</a></li>
-						<li class="nav-item"><a class="nav-link" href="css.html" id="cssLink">CSS Overview</a></li>
-						<li class="nav-item"><a class="nav-link" href="cssselectors.html" id="selectorsLink">CSS Selectors &amp; Properties</a></li>
-						<li class="nav-item"><a class="nav-link" href="cssboxmodel.html" id="boxModelLink">CSS Box Model</a></li>
-						<li class="nav-item"><a class="nav-link" href="cssFloatPosDisp.html" id="floatPosDispLink">CSS Float, Position, Display</a></li>
-						<li class="nav-item"><a class="nav-link" href="csslayouts.html" id="layoutsLink">CSS Layouts</a></li>
-                        <li class="nav-item"><a class="nav-link" href="bootstrap.html" id="bootstrapLink">CSS Bootstrap</a>
-                        </li>
-						<li class="nav-item"><a class="nav-link" href="js.html" id="jsLink">JS Overview</a></li>
-						<li class="nav-item">
-							<a href="playground.html" class="nav-link" id="playgroundLink">
-								Playground
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-	
+
 	  <!-- Bootstrap JS -->
 	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
@@ -150,19 +44,19 @@
 	<div class="container">
         <h1>Learn CSS Flexbox Layout</h1>
 		<div class="flex-row">
-			<div class="box">Box 1</div>
-			<div class="box">Box 2</div>
-			<div class="box">Box 3</div>
+			<div class="box-clay">Box 1</div>
+			<div class="box-clay">Box 2</div>
+			<div class="box-clay">Box 3</div>
 		</div>
 		<div class="flex-row">
-			<div class="box">Box 4</div>
-			<div class="box">Box 5</div>
-			<div class="box">Box 6</div>
+			<div class="box-clay">Box 4</div>
+			<div class="box-clay">Box 5</div>
+			<div class="box-clay">Box 6</div>
 		</div>
 		<div class="flex-row">
-			<div class="box">Box 7</div>
-			<div class="box">Box 8</div>
-			<div class="box">Box 9</div>
+			<div class="box-clay">Box 7</div>
+			<div class="box-clay">Box 8</div>
+			<div class="box-clay">Box 9</div>
 		</div>
 	</div> 
 		<p style="text-align: center;">© 2023 Made with 🖤 by <strong>Vikas Bandaru</strong></p>
@@ -188,5 +82,3 @@
           });
   }
   </script>
-</body>
-</html>

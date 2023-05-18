@@ -1,63 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Learn Bootstrap Step-by-Step
+---
+<button id="openbtn" class="openbtn" onclick="openNav()">☰</button>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Learn Bootstrap Step-by-Step</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <style>
-        
-    .sidebar {
-      position: sticky;
-      top: 0;
-      z-index: 1;
-      overflow-y: auto;
-      padding: 0;
-      height: 100vh;
-      width: 200px;
-      float: left;
-    }
 
-    /* Styling for the up array fixed position example */
-    #up-arrow {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 9999;
-        cursor: pointer;
-      }
-      .uparrow {
-        width: 50px;
-        height: 50px;
-      }
-    .clearfix {
-      clear: both;
-    }
-    @media (max-width: 768px) {
 
-      /* Styles for screen sizes smaller than 768px */
-      .sidebar {
-        display: none;
-      }
+   
 
-      .navbar-nav {
-        margin: auto;
-        display: flex;
-        justify-content: space-evenly;
-        position: sticky;;
-      }
-
-    }
-    </style>
-</head>
-
-<body>
     
     <!-- As a side panel -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 sidebar">
+            <!-- <div class="col-md-3 sidebar">
                 <div class="d-none d-md-flex flex-column flex-shrink-0 p-3 bg-dark"
                     style="width: 280px; height: 100vh;">
                     <a href="index.html"
@@ -105,7 +60,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Bootstrap JS -->
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -246,11 +201,3 @@
             </div>
         </div>
 </div>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<!-- Up Arrow Image -->
-<a href="#top" id="up-arrow"><img class="uparrow" src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-512.png" alt="Up Arrow"></a>
-</body>
-
-</html>
