@@ -2,133 +2,162 @@
 layout: default
 title: Example - Online Store
 ---
+
 <button id="openbtn" class="openbtn" onclick="openNav()">☰</button>
 
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Simple E-commerce Site</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="products.html">Product Cards</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="cart.html">Cart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Simple E-commerce Site</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="products.html">Product Cards</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cart.html">Cart</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
+<!-- Home Page -->
+<div class="container">
+  <h1>Welcome to Simple E-commerce Site</h1>
+  <p class="lead">
+    Browse our selection of products and find the perfect one for you.
+  </p>
+</div>
+
+<!-- Products Page -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://picsum.photos/id/1015/200/150"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Product 1</h5>
+          <p class="card-text">This is a description of Product 1.</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
         </div>
-    </nav>
-
-    <!-- Home Page -->
-    <div class="container">
-        <h1>Welcome to Simple E-commerce Site</h1>
-        <p class="lead">Browse our selection of products and find the perfect one for you.</p>
+      </div>
     </div>
-
-    <!-- Products Page -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top" src="https://picsum.photos/id/1015/200/150" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Product 1</h5>
-                        <p class="card-text">This is a description of Product 1.</p>
-                        <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top" src="https://picsum.photos/id/1025/200/150" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Product 2</h5>
-                        <p class="card-text">This is a description of Product 2.</p>
-                        <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top" src="https://picsum.photos/id/1035/200/150" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Product 3</h5>
-                        <p class="card-text">This is a description of Product 3.</p>
-                        <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://picsum.photos/id/1025/200/150"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Product 2</h5>
+          <p class="card-text">This is a description of Product 2.</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
         </div>
+      </div>
     </div>
-    
-    <!-- Contact Page -->
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p>Fill out the form below to send us a message.</p>
-        <form>
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://picsum.photos/id/1035/200/150"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Product 3</h5>
+          <p class="card-text">This is a description of Product 3.</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
     </div>
-    
-    <!-- Cart Page -->
-    <div class="container">
-        <h2>Cart</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Subtotal</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Product 1</td>
-                    <td>$10</td>
-                    <td>1</td>
-                    <td>$10</td>
-                </tr>
-                <tr>
-                    <td>Product 2</td>
-                    <td>$20</td>
-                    <td>2</td>
-                    <td>$40</td>
-                </tr>
-                <tr>
-                    <td colspan="3">Total</td>
-                    <td>$50</td>
-                </tr>
-            </tbody>
-        </table>
+  </div>
+</div>
+
+<!-- Contact Page -->
+<div class="container">
+  <h2>Contact Us</h2>
+  <p>Fill out the form below to send us a message.</p>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Enter your name"
+      />
     </div>
-    
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blEloh6TMicB9JQ/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/esm/popper" integrity="sha384-cEi2ttzvMcD5tc5cFEnC94tCl8i5HXOMdLXUPfZgVzNLmPQscGmHl/V2QOGy+yiF" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous">
-	</script>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Enter your email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea
+        class="form-control"
+        id="message"
+        rows="3"
+        placeholder="Enter your message"
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Cart Page -->
+<div class="container">
+  <h2>Cart</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Product 1</td>
+        <td>$10</td>
+        <td>1</td>
+        <td>$10</td>
+      </tr>
+      <tr>
+        <td>Product 2</td>
+        <td>$20</td>
+        <td>2</td>
+        <td>$40</td>
+      </tr>
+      <tr>
+        <td colspan="3">Total</td>
+        <td>$50</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
