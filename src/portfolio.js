@@ -49,15 +49,16 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY SALESFORCE & FULL STACK INSTRUCTOR WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle:
+    "CRAZY SALESFORCE & FULL STACK INSTRUCTOR WHO WANTS TO EXPLORE EVERY TECH STACK",
   skills: [
     emoji(
       "⚡ Conduct highly interactive sessions of Front end & Back end for young aspirants"
     ),
-    emoji("⚡ Create content and workbooks for easy learning & mastering complex technical jargon"),
     emoji(
-      "⚡ Integration of frameworks like Angular & Springboot"
-    )
+      "⚡ Create content and workbooks for easy learning & mastering complex technical jargon"
+    ),
+    emoji("⚡ Integration of frameworks like Angular & Springboot")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -99,7 +100,7 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "sql-database",
       fontAwesomeClassname: "fas fa-database"
-    },
+    }
     // {
     //   skillName: "aws",
     //   fontAwesomeClassname: "fab fa-aws"
@@ -129,7 +130,7 @@ const educationInfo = {
       schoolName: "GITAM University",
       logo: require("./assets/images/gitam-logo.jpg"),
       subHeader: "Master of Technology in Computer Science & Technology",
-      duration: "September 2012 - April 2014",
+      duration: "September 2012 - April 2014"
       // desc: "Participated in the research of XXX and published 3 papers.",
       // descBullets: [
       //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -140,7 +141,7 @@ const educationInfo = {
       schoolName: "Vidya Jyothi Institute of Technology",
       logo: require("./assets/images/vjit-logo.png"),
       subHeader: "Bachelor of Technology in Computer Science & Engineering",
-      duration: "September 2003 - April 2008",
+      duration: "September 2003 - April 2008"
       // desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
       // descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     }
@@ -177,7 +178,7 @@ const workExperiences = {
       role: "Senior Trainer",
       company: "Tracxe",
       companylogo: require("./assets/images/tracxe-logo.png"),
-      date: "April 2024 – Present",
+      date: "April 2024 – Present"
       // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       // descBullets: [
       //   "Designed curriculum for Java Full Stack Development course",
@@ -188,14 +189,14 @@ const workExperiences = {
       role: "Senior Cosultant - Delivery",
       company: "TalentSprint Pvt. Ltd.",
       companylogo: require("./assets/images/ts-logo.webp"),
-      date: "August 2022 – March 2024",
+      date: "August 2022 – March 2024"
       // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       role: "Assistant Professor",
       company: "Vidya Jyothi Institute of Technology",
       companylogo: require("./assets/images/vjit-logo.png"),
-      date: "June 2015 – July 2022",
+      date: "June 2015 – July 2022"
       // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ]
@@ -253,15 +254,14 @@ const achievementSection = {
   achievementsCards: [
     {
       title: "Salesforce Certified Instructor",
-      subtitle:
-        "",
+      subtitle: "",
       image: require("./assets/images/pd1CertLogo.png"),
       imageAlt: "Salesforce PD-1 Certificate",
       footerLink: [
         {
           name: "Certification",
           url: "https://www.salesforce.com/trailblazer/vbandaru15"
-        },
+        }
         // {
         //   name: "Award Letter",
         //   url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
@@ -274,8 +274,7 @@ const achievementSection = {
     },
     {
       title: "Salesforce Certified Developer",
-      subtitle:
-        "",
+      subtitle: "",
       image: require("./assets/images/pd1CertLogo.png"),
       imageAlt: "Salesforce PD-1 Certificate",
       footerLink: [
@@ -292,7 +291,10 @@ const achievementSection = {
       image: require("./assets/images/sfBuildLogo.png"),
       imageAlt: "Salesforce Platform Builder Logo",
       footerLink: [
-        {name: "Certification", url: "https://www.salesforce.com/trailblazer/vbandaru15"},
+        {
+          name: "Certification",
+          url: "https://www.salesforce.com/trailblazer/vbandaru15"
+        }
         // {
         //   name: "Final Project",
         //   url: "https://pakistan-olx-1.firebaseapp.com/"
