@@ -25,8 +25,8 @@ const greeting = {
   subTitle: emoji(
     "A passionate instructor of Java Full Stack Development and a Certified Salesforce Developer 🚀 having an experience of building curricula, crafting interesting content and delivering online & offline sessions on Java / Springboot / JavaScript / Angular and some other cool frameworks."
   ),
-  resumeLink:
-    "https://drive.google.com/file/d/1T-Na69WXw4h9JbsK9c8YHtd2q6WHMlPe/view?usp=sharing", // Set to empty to hide the button
+  // resumeLink:
+    // "https://drive.google.com/file/d/1T-Na69WXw4h9JbsK9c8YHtd2q6WHMlPe/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -36,10 +36,10 @@ const socialMediaLinks = {
   github: "https://github.com/vikas-bandaru",
   linkedin: "https://www.linkedin.com/in/vikas-bandaru/",
   gmail: "vikas.bandaaru@gmail.com",
-  // gitlab: "https://gitlab.com/vikas-bandaru",
   facebook: "https://www.facebook.com/vix.daru",
+  instagram: "https://www.instagram.com/vixdaru/",
   medium: "https://medium.com/@vikas-bandaru",
-  x: "https://x.com/VikasBandaru7",
+  twitter: "https://x.com/VikasBandaru7",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -66,11 +66,19 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
+      skillName: "Java",
+      fontAwesomeClassname: "fab fa-java"
+    },
+    {
+      skillName: "sql-database",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {
+      skillName: "HTML5",
       fontAwesomeClassname: "fab fa-html5"
     },
     {
-      skillName: "css3",
+      skillName: "CSS3",
       fontAwesomeClassname: "fab fa-css3-alt"
     },
     // {
@@ -81,26 +89,26 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "JavaScript",
       fontAwesomeClassname: "fab fa-js"
     },
-    // {
-    //   skillName: "reactjs",
-    //   fontAwesomeClassname: "fab fa-react"
-    // },
     {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
+      skillName: "Angular",
+      fontAwesomeClassname: "fab fa-angular"
     },
+    {
+      skillName: "reactjs",
+      fontAwesomeClassname: "fab fa-react"
+    },
+    // {
+    //   skillName: "nodejs",
+    //   fontAwesomeClassname: "fab fa-node"
+    // },
     // {
     //   skillName: "swift",
     //   fontAwesomeClassname: "fab fa-swift"
     // },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    }
+    // {
+    //   skillName: "npm",
+    //   fontAwesomeClassname: "fab fa-npm"
+    // },
     // {
     //   skillName: "aws",
     //   fontAwesomeClassname: "fab fa-aws"
@@ -154,17 +162,18 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "60%" //Insert relative proficiency in percentage
+      Stack: "Problem Solving/Java",
+      progressPercentage: "85%"
     },
     {
-      Stack: "Backend",
-      progressPercentage: "80%"
-    },
-    {
-      Stack: "Programming",
+      Stack: "Backend/Springboot",
       progressPercentage: "70%"
-    }
+    },
+    {
+      Stack: "Frontend/Angular", //Insert stack or technology you have experience in
+      progressPercentage: "70%" //Insert relative proficiency in percentage
+    },
+    
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
@@ -382,7 +391,7 @@ const contactInfo = {
 
 const twitterDetails = {
   userName: "VikasBandaru7", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
